@@ -7,6 +7,7 @@ import {
   IconWebhook,
 } from "@tabler/icons-react";
 import { createFileRoute } from "@tanstack/react-router";
+import { EtheralShadow } from "@/components/ui/etheral-shadow";
 
 export const Route = createFileRoute("/solutions")({
   component: RouteComponent,
@@ -34,7 +35,7 @@ function SolutionsCardCustom({
 
 function RouteComponent() {
   return (
-    <div className="max-w-screen relative">
+    <EtheralShadow opacity={0.4} maskImageURL="/mask-2.png" sizing="stretch">
       <div className="py-12 md:py-20 mt-10 max-sm:mt-20">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <span className="capitalize font-bold text-center text-xl lg:text-3xl flex max-sm:flex-col justify-center items-center gap-3">
@@ -47,7 +48,7 @@ function RouteComponent() {
             Offers
           </span>
 
-          <div className="relative mx-auto grid max-w-6xl divide-x divide-y border *:p-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="relative mx-auto grid max-w-6xl divide-x divide-y border *:p-8 sm:grid-cols-2 lg:grid-cols-3 backdrop-blur-3xl rounded-xl overflow-hidden">
             <SolutionsCardCustom
               title="Product Overview"
               description="The Project Overview service offers a detailed summary of a project, outlining its objectives, scope, timelines, and expected outcomes to ensure all stakeholders are aligned."
@@ -81,6 +82,6 @@ function RouteComponent() {
           </div>
         </div>
       </div>
-    </div>
+    </EtheralShadow>
   );
 }
