@@ -3,6 +3,7 @@ import {
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandX,
+  IconMail,
 } from "@tabler/icons-react";
 import { Link } from "@tanstack/react-router";
 
@@ -70,6 +71,15 @@ export default function Footer() {
             className="text-muted-foreground hover:text-primary block"
           >
             <IconBrandInstagram />
+          </a>
+          <a
+            href="mailto:info@tech.docufybd.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Email"
+            className="text-muted-foreground hover:text-primary block"
+          >
+            <IconMail />
           </a>
         </div>
         <span className="text-muted-foreground block text-center text-sm font-bold">

@@ -17,8 +17,6 @@ function Home() {
           maskImageURL="/mask-1.png"
           noise={{ opacity: 1, scale: 1.2 }}
           sizing="fill"
-          color="var(--secondary)"
-          opacity={0.75}
         >
           <div className="flex flex-col max-w-4xl p-6 w-full mx-auto h-full justify-center items-center gap-12 max-sm:gap-8 text-center">
             <img
@@ -61,7 +59,14 @@ function Home() {
                 </a>
               </AnimatedButton>
               <Button variant={"outline"} size={"lg"} className="w-full">
-                Contact Team
+                <a
+                  href="mailto:info@tech.docufybd.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full h-full flex justify-center items-center"
+                >
+                  Contact Team
+                </a>
               </Button>
             </div>
           </div>
