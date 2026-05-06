@@ -19,7 +19,7 @@ function NavHeader() {
 
   return (
     <ul
-      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop:blur-xl z-100 fixed top-4 left-1/2 -translate-x-1/2 p-1"
+      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop:blur-xl z-100 fixed top-4 left-1/2 -translate-x-1/2 p-2 max-sm:p-1 gap-4 max-sm:gap-0"
       onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
     >
       <Tab setPosition={setPosition}>Home</Tab>
@@ -54,7 +54,7 @@ const Tab = ({
           left: ref.current.offsetLeft,
         });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase md:px-5 md:py-3 md:text-base"
+      className="relative z-10 block cursor-pointer px-3 py-1.5 -translate-y-0.5 text-xs uppercase md:text-base"
     >
       {children}
     </li>
@@ -65,7 +65,7 @@ const Cursor = ({ position }: { position: Position }) => {
   return (
     <motion.li
       animate={position}
-      className="absolute z-0 h-7 rounded-full bg-secondary md:h-12"
+      className="absolute z-0 h-9 -translate-y-2.5 max-sm:-translate-y-2 rounded-full bg-secondary md:h-12"
     />
   );
 };

@@ -16,27 +16,31 @@ function Home() {
         color="var(--secondary)"
         opacity={0.6}
       >
-        <div className="max-w-2xl flex flex-col items-center justify-center h-full mx-auto text-center gap-6">
+        <div className="flex flex-col max-w-4xl p-6 w-full mx-auto h-full justify-center items-center gap-6 text-center">
           <img
             src="/logo512.svg"
             alt="docufy tech logo"
-            className="mx-auto w-48 mb-4"
+            className="mx-auto w-48"
           />
-          <h1 className="uppercase tracking-wider">Build without limits</h1>
-          <p className="font-medium text-lg">
+          <h1 className="uppercase lg:text-5xl max-sm:text-xl">
+            Build without limits
+          </h1>
+          <p className="font-medium text-lg max-sm:text-sm text-balance">
             We build enterprise-grade, high-performance systems with seamless
             AI/ML integration, ensuring robust data, cyber, and digital security
             that results into accelerating your business growth.
           </p>
-          <div className="flex gap-4 justify-center items-center mx-auto mt-4">
-            <a
-              href="https://calendly.com/docufytechnologies/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm"
-            >
-              <AnimatedButton size={"lg"}>Book A Call Now</AnimatedButton>
-            </a>
+          <div className="grid grid-cols-2 gap-4 max-sm:gap-2 w-full max-w-sm justify-center items-center mt-4">
+            <AnimatedButton size="lg">
+              <a
+                href="https://calendly.com/docufytechnologies/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book A Call Now
+              </a>
+            </AnimatedButton>
+
             <Button variant={"outline"} size={"lg"}>
               Contact Team
             </Button>
