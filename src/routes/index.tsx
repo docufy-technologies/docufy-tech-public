@@ -15,7 +15,6 @@ function Home() {
       <section id="hero" className="h-screen w-full overflow-x-clip">
         <EtheralShadow
           maskImageURL="/mask-1.png"
-          animation={{ scale: 100, speed: 90 }}
           noise={{ opacity: 1, scale: 1.2 }}
           sizing="fill"
           color="var(--secondary)"

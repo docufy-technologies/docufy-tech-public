@@ -11,13 +11,6 @@ import {
   useRef,
 } from "react";
 
-// Type definitions
-interface ResponsiveImage {
-  src: string;
-  alt?: string;
-  srcSet?: string;
-}
-
 interface AnimationConfig {
   preview?: boolean;
   scale: number;
@@ -32,10 +25,8 @@ interface NoiseConfig {
 interface ShadowOverlayProps {
   type?: "preset" | "custom";
   presetIndex?: number;
-  customImage?: ResponsiveImage;
   sizing?: "fill" | "stretch";
   color?: string;
-  animation?: AnimationConfig;
   noise?: NoiseConfig;
   style?: CSSProperties;
   className?: string;
@@ -68,7 +59,6 @@ const useInstanceId = (): string => {
 export function EtheralShadow({
   sizing = "fill",
   color = "rgba(128, 128, 128, 1)",
-  animation,
   noise,
   style,
   className,
@@ -76,6 +66,7 @@ export function EtheralShadow({
   maskImageURL = "https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png",
   opacity = 1,
 }: ShadowOverlayProps) {
+  const animation = { scale: 100, speed: 90 } as AnimationConfig;
   const id = useInstanceId();
   const animationEnabled = animation && animation.scale > 0;
   const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
@@ -208,7 +199,7 @@ export function EtheralShadow({
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url("https://framerusercontent.com/images/g0QcWrxr87K0ufOxIUFBakwYA8.png")`,
+            backgroundImage: `url("/noise.png")`,
             backgroundSize: noise.scale * 200,
             backgroundRepeat: "repeat",
             opacity: noise.opacity / 2,
