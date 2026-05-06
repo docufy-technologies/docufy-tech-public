@@ -4,6 +4,7 @@ import {
   IconBrandLinkedin,
   IconBrandX,
 } from "@tabler/icons-react";
+import { Link } from "@tanstack/react-router";
 
 function FooterAnchor({ label, href }: { label: string; href: string }) {
   return (
@@ -21,8 +22,8 @@ function FooterAnchor({ label, href }: { label: string; href: string }) {
 export default function Footer() {
   return (
     <footer className="pb-16">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="my-8 flex flex-wrap justify-center gap-6">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
           <FooterAnchor label="Who We Are" href="https://docufybd.com" />
           <FooterAnchor
             label="Privacy Policy"
@@ -33,7 +34,7 @@ export default function Footer() {
             href="https://docufybd.com/terms-and-conditions"
           />
         </div>
-        <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
+        <div className="my-5 flex flex-wrap justify-center gap-6 text-sm">
           <a
             href="https://x.com/docufybd"
             target="_blank"
@@ -71,9 +72,10 @@ export default function Footer() {
             <IconBrandInstagram />
           </a>
         </div>
-        <span className="text-muted-foreground block text-center text-sm">
+        <span className="text-muted-foreground block text-center text-sm font-bold">
           {" "}
-          © {new Date().getFullYear()} Docufy Tech, All rights reserved
+          © 2024 - {new Date().getFullYear()} <Link to="/">Docufy Tech</Link>,
+          All rights reserved
         </span>
       </div>
     </footer>

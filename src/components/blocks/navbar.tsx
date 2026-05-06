@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <ul
-      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-2xl z-100 fixed top-1 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0 shadow-xs shadow-secondary"
+      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-xl z-100 fixed top-1 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0 shadow-xs shadow-secondary"
       onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
     >
       <Tab setPosition={setPosition}>
@@ -76,7 +76,7 @@ const Cursor = ({ position }: { position: Position }) => {
   return (
     <motion.li
       animate={position}
-      className="absolute z-0 h-7 -translate-y-1.5 max-sm:-translate-y-1 rounded-full bg-secondary md:h-10"
+      className="absolute z-0 h-9 -translate-y-1.5 max-sm:-translate-y-1 rounded-full bg-secondary md:h-10"
     />
   );
 };

@@ -70,7 +70,7 @@ function Home() {
       <section className="h-fit w-full overflow-x-clip overflow-y-hidden">
         <div className="mx-auto w-full max-w-2xl">
           <div className="text-center text-3xl text-foreground">
-            <h1 className="text-secondary lg:text-5xl font-normal capitalize">
+            <h1 className="text-secondary lg:text-5xl text-xl font-normal capitalize">
               Our Partners And Patrons
             </h1>
           </div>
