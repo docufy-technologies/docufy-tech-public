@@ -1,61 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* font face of cabinet grostesk */
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Thin.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Thin.woff2") format("woff2");
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Extralight.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Extralight.woff2") format("woff2");
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Light.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Regular.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Medium.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Bold.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Extrabold.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Extrabold.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url("/fonts/CabinetGrotesk-Black.woff2") format("woff2");
+  src: url("/fonts/cabinet/CabinetGrotesk-Black.woff2") format("woff2");
   font-weight: 900;
   font-display: swap;
 }
 
+/* font face of nippo */
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Extralight.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nippo";
+  src: url("/fonts/nippo/Nippo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
 @theme inline {
-  --font-heading: "Sora", sans-serif;
+  --font-heading: "Nippo", sans-serif;
   --font-body: "CabinetGrotesk", sans-serif;
   --font-sans: var(--font-body);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -234,8 +270,7 @@
   }
 
   code {
-    font-family:
-      source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: monospace;
     @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
   }
 
