@@ -1,4 +1,4 @@
-import { PlusIcon } from "lucide-react";
+import { IconPlus as PlusIcon } from "@tabler/icons-react";
 
 export function BracketContainer({ children }: { children: React.ReactNode }) {
   return (

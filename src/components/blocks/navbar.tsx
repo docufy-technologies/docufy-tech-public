@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import type React from "react";
 import { useRef, useState } from "react";
+import type { ClassNameValue } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 type Position = {
   left: number;
@@ -10,7 +12,7 @@ type Position = {
   opacity: number;
 };
 
-function NavHeader() {
+function NavBar() {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
@@ -19,14 +21,13 @@ function NavHeader() {
 
   return (
     <ul
-      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-2xl z-100 fixed top-4 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0"
+      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-2xl z-100 fixed top-1 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0 shadow-xs shadow-secondary"
       onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
     >
       <Tab setPosition={setPosition}>Home</Tab>
       <Tab setPosition={setPosition}>About</Tab>
-      <Tab setPosition={setPosition}>Services</Tab>
+      <Tab setPosition={setPosition}>Solutions</Tab>
       <Tab setPosition={setPosition}>FAQs</Tab>
-      <Tab setPosition={setPosition}>Contact</Tab>
 
       <Cursor position={position} />
     </ul>
@@ -36,9 +37,11 @@ function NavHeader() {
 const Tab = ({
   children,
   setPosition,
+  className,
 }: {
   children: React.ReactNode;
   setPosition: (position: Position) => void;
+  className?: ClassNameValue;
 }) => {
   const ref = useRef<HTMLLIElement>(null);
   return (
@@ -54,7 +57,10 @@ const Tab = ({
           left: ref.current.offsetLeft,
         });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 -translate-y-0.5 text-xs uppercase md:text-base"
+      className={cn(
+        "relative z-10 block cursor-pointer px-3 py-1.5 -translate-y-0.5 text-base! md:text-base rounded-full hover:bg-secondary",
+        className,
+      )}
     >
       {children}
     </li>
@@ -70,4 +76,4 @@ const Cursor = ({ position }: { position: Position }) => {
   );
 };
 
-export default NavHeader;
+export default NavBar;

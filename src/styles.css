@@ -216,6 +216,7 @@
     scrollbar-width: thin;
     scrollbar-color: var(--color-muted-foreground) var(--color-muted);
     @apply border-border outline-ring/50 scroll-smooth;
+    transition: all 0.25s ease-in-out;
   }
 
   *::-webkit-calendar-picker-indicator,
@@ -291,5 +292,11 @@
   ul,
   ol {
     @apply my-6 ml-6 [&>li]:mt-2;
+  }
+}
+
+@layer utilities {
+  .tabler-icon {
+    @apply stroke-1;
   }
 }

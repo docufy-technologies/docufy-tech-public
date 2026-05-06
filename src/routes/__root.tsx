@@ -3,7 +3,8 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import "@/styles.css";
-import NavHeader from "@/components/blocks/nav-header";
+import Footer from "@/components/blocks/footer";
+import NavBar from "@/components/blocks/navbar";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -12,8 +13,9 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <ThemeProvider defaultTheme="dark">
-      <NavHeader />
+      <NavBar />
       <Outlet />
+      <Footer />
       <TanStackDevtools
         config={{
           position: "bottom-right",
