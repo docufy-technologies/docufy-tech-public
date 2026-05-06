@@ -19,7 +19,7 @@ function NavHeader() {
 
   return (
     <ul
-      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop:blur-xl z-100 fixed top-4 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0"
+      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-2xl z-100 fixed top-4 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0"
       onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
     >
       <Tab setPosition={setPosition}>Home</Tab>
