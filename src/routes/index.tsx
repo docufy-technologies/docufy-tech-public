@@ -1,6 +1,10 @@
 import {
+  IconBrandCss3,
+  IconBrandHtml5,
+  IconBrandJavascript,
+  IconBrandPython,
+  IconBrandTypescript,
   IconCheck,
-  IconCircleFilled,
   IconFingerprintOff,
   IconSearch,
 } from "@tabler/icons-react";
@@ -81,8 +85,11 @@ function Home() {
       </section>
 
       {/* why docufy tech section */}
-      <section id="why-docufy-tech-section" className="h-screen relative">
-        <h1 className="text-center uppercase">
+      <section
+        id="why-docufy-tech-section"
+        className="min-h-screen relative max-w-screen"
+      >
+        <h1 className="text-center uppercase max-sm:text-2xl text-balance">
           The Values Docufy Tech Provides
         </h1>
         <div className="py-16">
@@ -251,7 +258,7 @@ function Home() {
                 </CardContent>
               </Card>
               <Card className="relative col-span-full overflow-hidden lg:col-span-3">
-                <CardContent className="grid h-full pt-6 sm:grid-cols-[70%_30%]">
+                <CardContent className="h-full pt-6">
                   <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border">
                       <IconCheck className="m-auto size-6" strokeWidth={1} />
@@ -267,27 +274,37 @@ function Home() {
                       </p>
                     </div>
                   </div>
-                  <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
-                    <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
-                      <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                        <div className="ring-background size-7">
-                          <IconCircleFilled className="size-full rounded-full bg-secondary text-secondary" />
-                        </div>
-                      </div>
-                      <div className="relative ml-[calc(50%-1rem)] flex items-center gap-2">
-                        <div className="ring-background size-8">
-                          <IconCircleFilled className="size-full rounded-full bg-secondary text-secondary" />
-                        </div>
-                      </div>
-                      <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                        <div className="ring-background size-7">
-                          <IconCircleFilled className="size-full rounded-full bg-secondary text-secondary" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* tech stack section */}
+      <section id="tech-stack-section" className="h-fit max-w-screen">
+        <div className="flex flex-col justify-center items-center gap-6 py-16">
+          <h1 className="uppercase max-sm:text-2xl">Languages We Use</h1>
+          <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:justify-start max-sm:items-start justify-center items-center gap-8 text-center [&>.tabler-icon]:size-8 [&>.tabler-icon]:text-foreground/70 *:font-medium *:text-lg">
+            <div className="flex justify-center items-center gap-2">
+              <IconBrandHtml5 title="HTML5" />
+              <p>HTML5</p>
+            </div>
+            <div className="flex justify-center items-center gap-2">
+              <IconBrandCss3 title="CSS3" />
+              <p>CSS3</p>
+            </div>
+            <div className="flex justify-center items-center gap-2">
+              <IconBrandJavascript title="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+            <div className="flex justify-center items-center gap-2">
+              <IconBrandTypescript title="TypeScript" />
+              <p>TypeScript</p>
+            </div>
+            <div className="flex justify-center items-center gap-2">
+              <IconBrandPython title="Python" />
+              <p>Python</p>
             </div>
           </div>
         </div>
