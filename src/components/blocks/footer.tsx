@@ -5,7 +5,7 @@ import {
   IconBrandX,
   IconMail,
 } from "@tabler/icons-react";
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
 
 function FooterAnchor({ label, href }: { label: string; href: string }) {
   return (
@@ -20,18 +20,26 @@ function FooterAnchor({ label, href }: { label: string; href: string }) {
   );
 }
 
+function FooterLink({ label, to }: { label: string; to: LinkProps["to"] }) {
+  return (
+    <Link
+      to={to}
+      className="text-muted-foreground hover:text-primary block duration-150"
+    >
+      {label}
+    </Link>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="pb-16">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
           <FooterAnchor label="Who We Are" href="https://docufybd.com" />
+          <FooterLink label="Terms of Service" to="/terms-of-service" />
           <FooterAnchor
             label="Privacy Policy"
-            href="https://docufybd.com/privacy-policy"
-          />
-          <FooterAnchor
-            label="Terms And Conditions"
             href="https://docufybd.com/terms-and-conditions"
           />
         </div>
