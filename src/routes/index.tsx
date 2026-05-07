@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useTheme } from "@/components/provider/theme-provider";
 import AnimatedButton from "@/components/ui/animated-button";
 import { BracketContainer } from "@/components/ui/bracket-container";
 import { Button } from "@/components/ui/button";
@@ -9,7 +8,6 @@ import { Sparkles } from "@/components/ui/sparkles";
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
-  const { theme } = useTheme();
   return (
     <div className="max-w-screen">
       {/* hero section */}
@@ -95,7 +93,7 @@ function Home() {
           <Sparkles
             density={1200}
             className="absolute inset-x-0 bottom-0 h-full w-full mask-[radial-gradient(50%_50%,white,transparent_85%)]"
-            color={theme === "dark" ? "#ffffff" : "#000000"}
+            color={"var(--foreground)"}
           />
         </div>
       </section>
