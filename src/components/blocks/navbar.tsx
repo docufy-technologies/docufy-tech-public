@@ -32,7 +32,9 @@ function NavBar() {
       <Tab setPosition={setPosition}>
         <Link to="/solutions">Solutions</Link>
       </Tab>
-      <Tab setPosition={setPosition}>FAQs</Tab>
+      <Tab setPosition={setPosition}>
+        <Link to="/faq">FAQs</Link>
+      </Tab>
 
       <Cursor position={position} />
     </ul>
