@@ -38,10 +38,7 @@ export default function Footer() {
         <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
           <FooterAnchor label="Who We Are" href="https://docufybd.com" />
           <FooterLink label="Terms of Service" to="/terms-of-service" />
-          <FooterAnchor
-            label="Privacy Policy"
-            href="https://docufybd.com/terms-and-conditions"
-          />
+          <FooterLink label="Privacy Policy" to="/privacy-policy" />
         </div>
         <div className="my-5 flex flex-wrap justify-center gap-6 text-sm">
           <a
