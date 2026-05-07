@@ -28,7 +28,7 @@ export function Sparkles({
   opacity = 1,
   opacitySpeed = 3,
   minOpacity = null,
-  color = "var(--foreground)",
+  color = "#FFFFFF",
   background = "transparent",
   options = {},
 }: SparklesProps) {
@@ -92,17 +92,13 @@ export function Sparkles({
     detectRetina: true,
   } satisfies ISourceOptions;
 
-  const mergedOptions: ISourceOptions = {
-    ...defaultOptions,
-    ...options,
-  };
-
-  return isReady ? (
-    <Particles
-      id={id}
-      options={mergedOptions}
-      className={className}
-      style={{ position: "absolute", inset: 0 }}
-    />
-  ) : null;
+  return (
+    isReady && (
+      <Particles
+        id={id}
+        options={{ ...defaultOptions, ...options }}
+        className={className}
+      />
+    )
+  );
 }
