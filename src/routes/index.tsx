@@ -94,7 +94,7 @@ function Home() {
         </h1>
         <div className="py-16">
           <div className="mx-auto max-w-3xl lg:max-w-5xl px-6">
-            <div className="relative z-10 grid grid-cols-6 gap-3">
+            <div className="relative z-5 grid grid-cols-6 gap-3">
               <Card className="relative col-span-full flex overflow-hidden lg:col-span-2">
                 <CardContent className="relative m-auto size-fit pt-6 flex flex-col items-center justify-center">
                   <div className="relative flex h-24 w-56 items-center my-12">
@@ -115,7 +115,7 @@ function Home() {
                   <div className="relative mx-auto flex aspect-square size-20 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border my-10">
                     <IconFingerprintOff className="m-auto h-fit w-14" />
                   </div>
-                  <div className="relative z-10 mt-6 space-y-2 text-center">
+                  <div className="relative z-5 mt-6 space-y-2 text-center">
                     <h2 className="group-hover:text-secondary-950 text-lg font-medium transition">
                       Security, Built In
                     </h2>
@@ -180,7 +180,7 @@ function Home() {
                       </defs>
                     </svg>
                   </div>
-                  <div className="relative z-10 mt-14 space-y-2 text-center">
+                  <div className="relative z-5 mt-14 space-y-2 text-center">
                     <h2 className="text-lg font-medium transition">
                       Delivery You Can Trust
                     </h2>
@@ -193,7 +193,7 @@ function Home() {
               </Card>
               <Card className="relative col-span-full overflow-hidden lg:col-span-3">
                 <CardContent className="grid pt-6 sm:grid-cols-2">
-                  <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
+                  <div className="relative z-5 flex flex-col justify-between space-y-12 lg:space-y-6">
                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border">
                       <IconSearch className="m-auto size-5" strokeWidth={1} />
                     </div>
@@ -259,7 +259,7 @@ function Home() {
               </Card>
               <Card className="relative col-span-full overflow-hidden lg:col-span-3">
                 <CardContent className="h-full pt-6">
-                  <div className="relative z-10 flex flex-col justify-between space-y-12 lg:space-y-6">
+                  <div className="relative z-5 flex flex-col justify-between space-y-12 lg:space-y-6">
                     <div className="relative flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border">
                       <IconCheck className="m-auto size-6" strokeWidth={1} />
                     </div>
@@ -315,23 +315,49 @@ function Home() {
         id="partners-section"
         className="h-fit w-full overflow-x-clip overflow-y-hidden mt-20"
       >
-        <div className="mx-auto w-full max-w-2xl">
+        <div className="mx-auto w-full max-w-2xl z-12">
           <div className="text-center text-3xl text-foreground">
             <h1 className="lg:text-4xl text-xl font-bold uppercase mb-4">
-              Our Partners And Patrons
+              Our Partners & Patrons
             </h1>
           </div>
-          <div className="mt-14 mx-auto w-fit" id="partners-logo">
+          <div
+            className="mt-14 mx-auto w-fit flex gap-x-8 gap-y-2 justify-center items-center"
+            id="partners-logo"
+          >
             <img src="/nnologo.png" alt="NNO Logo" className="h-12 w-auto" />
+            <img
+              src="/docufy-logo-alabaster.svg"
+              alt="NNO Logo"
+              className="h-28 w-auto"
+            />
           </div>
         </div>
-        <div className="relative -mt-32 h-96 w-full overflow-hidden mask-[radial-gradient(50%_50%,white,transparent)]">
+        <div className="relative -mt-32 h-64 w-full overflow-hidden mask-[radial-gradient(50%_50%,white,transparent)]">
           <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,var(--secondary),transparent_70%)] before:opacity-40" />
-          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] border-t border-secondary bg-background" />
+          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-5 w-[200%] rounded-[100%] border-t border-secondary bg-background" />
           <Sparkles
             density={1200}
             className="absolute inset-x-0 bottom-0 h-full w-full mask-[radial-gradient(50%_50%,white,transparent_85%)]"
           />
+        </div>
+      </section>
+
+      {/* final cta section */}
+      <section
+        id="final-cta-section"
+        className="h-fit w-fit max-w-2xl mx-auto mb-20 p-4"
+      >
+        <p className="text-xl text-center mb-4">
+          One less thing to worry. Let Docufy Tech handle it for you.
+        </p>
+        <div className="flex gap-6 justify-center items-center">
+          <AnimatedButton variant="outline" className="uppercase">
+            Request A Quote
+          </AnimatedButton>
+          <AnimatedButton variant="outline" className="uppercase">
+            Request A Demo
+          </AnimatedButton>
         </div>
       </section>
     </div>
