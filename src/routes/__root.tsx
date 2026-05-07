@@ -1,7 +1,6 @@
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
-import { ThemeProvider } from "@/components/provider/theme-provider";
 import "@/styles.css";
 import Footer from "@/components/blocks/footer";
 import NavBar from "@/components/blocks/navbar";
@@ -12,7 +11,7 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <ThemeProvider defaultTheme="dark">
+    <>
       <NavBar />
       <Outlet />
       <Footer />
@@ -27,6 +26,6 @@ function RootComponent() {
           },
         ]}
       />
-    </ThemeProvider>
+    </>
   );
 }

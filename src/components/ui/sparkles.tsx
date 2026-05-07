@@ -1,4 +1,4 @@
-import type { Engine, ISourceOptions } from "@tsparticles/engine";
+import type { ISourceOptions } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useId, useState } from "react";
@@ -28,14 +28,14 @@ export function Sparkles({
   opacity = 1,
   opacitySpeed = 3,
   minOpacity = null,
-  color = "var(--secondary",
+  color = "var(--foreground)",
   background = "transparent",
   options = {},
 }: SparklesProps) {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    initParticlesEngine(async (engine: Engine) => {
+    initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setIsReady(true);
@@ -98,6 +98,11 @@ export function Sparkles({
   };
 
   return isReady ? (
-    <Particles id={id} options={mergedOptions} className={className} />
+    <Particles
+      id={id}
+      options={mergedOptions}
+      className={className}
+      style={{ position: "absolute", inset: 0 }}
+    />
   ) : null;
 }
