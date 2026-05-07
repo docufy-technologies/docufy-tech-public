@@ -12,7 +12,8 @@ function Home() {
   const { theme } = useTheme();
   return (
     <div className="max-w-screen">
-      <section id="hero" className="h-screen w-full overflow-x-clip">
+      {/* hero section */}
+      <section id="hero-section" className="h-screen w-full overflow-x-clip">
         <EtheralShadow
           maskImageURL="/mask-1.png"
           noise={{ opacity: 1, scale: 1.2 }}
@@ -72,19 +73,22 @@ function Home() {
           </div>
         </EtheralShadow>
       </section>
-      <section className="h-fit w-full overflow-x-clip overflow-y-hidden">
+
+      {/* our partners section */}
+      <section
+        id="partners-section"
+        className="h-fit w-full overflow-x-clip overflow-y-hidden"
+      >
         <div className="mx-auto w-full max-w-2xl">
           <div className="text-center text-3xl text-foreground">
-            <h1 className="text-secondary lg:text-5xl text-xl font-normal capitalize">
+            <h1 className="lg:text-4xl text-xl font-bold uppercase text-secondary">
               Our Partners And Patrons
             </h1>
           </div>
-
-          <div className="mt-14 mx-auto w-fit">
+          <div className="mt-14 mx-auto w-fit" id="partners-logo">
             <img src="/nnologo.png" alt="NNO Logo" className="h-12 w-auto" />
           </div>
         </div>
-
         <div className="relative -mt-32 h-96 w-full overflow-hidden mask-[radial-gradient(50%_50%,white,transparent)]">
           <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,var(--accent),transparent_60%)] before:opacity-40" />
           <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] border-t bg-background/80" />

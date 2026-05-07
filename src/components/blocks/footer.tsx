@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="pb-16">
       <div className="mx-auto max-w-4xl px-6">
-        <div className="mt-8 flex flex-wrap justify-center gap-6">
+        <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
           <FooterAnchor label="Who We Are" href="https://docufybd.com" />
           <FooterAnchor
             label="Privacy Policy"
@@ -82,10 +82,10 @@ export default function Footer() {
             <IconMail />
           </a>
         </div>
-        <span className="text-muted-foreground block text-center text-sm font-bold">
+        <span className="text-muted-foreground block text-center text-base font-bold">
           {" "}
-          © 2024 - {new Date().getFullYear()} <Link to="/">Docufy Tech</Link>,
-          All rights reserved
+          © {new Date().getFullYear()} <Link to="/">Docufy Tech</Link>, All
+          rights reserved
         </span>
       </div>
     </footer>
