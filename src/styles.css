@@ -53,45 +53,80 @@
     font-display: swap;
 }
 
-/* font face of nippo */
+/* font face of rowan */
 @font-face {
-    font-family: "Nippo";
-    src: url("/fonts/nippo/Nippo-Extralight.woff2") format("woff2");
-    font-weight: 200;
-    font-display: swap;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Nippo";
-    src: url("/fonts/nippo/Nippo-Light.woff2") format("woff2");
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-Light.woff2") format("woff2");
     font-weight: 300;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
-    font-family: "Nippo";
-    src: url("/fonts/nippo/Nippo-Regular.woff2") format("woff2");
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-Regular.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
-    font-family: "Nippo";
-    src: url("/fonts/nippo/Nippo-Medium.woff2") format("woff2");
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-Medium.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
-    font-family: "Nippo";
-    src: url("/fonts/nippo/Nippo-Bold.woff2") format("woff2");
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-SemiboldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-Bold.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
 }
+@font-face {
+    font-family: "Rowan";
+    src: url("/fonts/rowan/Rowan-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
 
 @theme inline {
-    --font-heading: "Nippo", sans-serif;
+    --font-heading: "Rowan", sans-serif;
     --font-body: "CabinetGrotesk", sans-serif;
     --font-sans: var(--font-body);
     --color-sidebar-ring: var(--sidebar-ring);

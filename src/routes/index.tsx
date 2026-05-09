@@ -337,7 +337,7 @@ function Home() {
       >
         <div className="mx-auto w-full max-w-2xl z-12">
           <div className="text-center text-3xl text-foreground">
-            <h1 className="lg:text-4xl text-xl font-bold uppercase mb-4">
+            <h1 className="lg:text-4xl text-xl uppercase mb-4">
               Our Partners & Patrons
             </h1>
           </div>
