@@ -43,9 +43,7 @@ function RouteComponent() {
   return (
     <>
       <section className="h-[50dvh] w-full flex justify-center items-center flex-col gap-4 pt-30">
-        <span className="text-center font-normal tracking-wide text-2xl md:text-6xl">
-          About The Company
-        </span>
+        <h1 className="text-center tracking-wider">About The Company</h1>
         {/*tagline*/}
         <span className="text-center text-sm sm:text-lg uppercase tracking-widest text-accent">
           docufy tech: build without limits
@@ -97,9 +95,9 @@ function RouteComponent() {
 
       {/*team section*/}
       <section className="py-30 flex flex-col gap-12 justify-center items-center">
-        <span className="text-2xl sm:text-4xl text-center text-accent">
+        <h1 className="text-center text-accent max-sm:text-2xl">
           Meet Our Core Members
-        </span>
+        </h1>
         <TeamShowcaseDesktop />
         <TeamShowcaseMobile />
       </section>

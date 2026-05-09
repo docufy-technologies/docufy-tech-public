@@ -269,7 +269,6 @@
         scrollbar-width: thin;
         scrollbar-color: var(--color-muted-foreground) var(--color-muted);
         @apply border-border outline-ring/50 scroll-smooth;
-        transition: all 0.25s ease-in-out;
 
         /*debug layer*/
         /*border: red 1px dotted;*/

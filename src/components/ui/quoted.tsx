@@ -12,16 +12,16 @@ export function Quoted({
   return (
     <div
       className={cn(
-        "relative mx-auto flex max-w-3xl w-[80%] flex-col justify-between gap-y-6 px-4 py-1 sm:py-8 text-center font-regular text-xl sm:text-4xl",
+        "relative mx-auto flex max-w-3xl w-[90%] flex-col justify-between gap-y-6 px-4 py-1 sm:py-8 text-center font-regular text-lg sm:text-4xl",
         className,
       )}
     >
       <IconQuoteOpen
-        className="absolute top-[-12.5px] left-[-11.5px] z-1 size-6 text-accent fill-accent"
+        className="absolute sm:top-[-12.5px] -top-3 sm:left-[-11.5px] -left-2 z-1 size-6 text-accent fill-accent"
         strokeWidth={1}
       />
       <IconQuote
-        className="absolute right-[-11.5px] bottom-[-12.5px] z-1 size-6 text-accent fill-accent"
+        className="absolute sm:right-[-11.5px] -right-2 sm:bottom-[-12.5px] -bottom-3 z-1 size-6 text-accent fill-accent"
         strokeWidth={1}
       />
       {text}

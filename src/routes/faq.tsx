@@ -194,11 +194,9 @@ const faqSections = [
 
 function RouteComponent() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-30 mt-10 [&>h1,h2,h3,h4,h5,h6,p,span,ul,li]:font-body!">
+    <section className="mx-auto max-w-4xl px-6 py-30 mt-10">
       <div className="mb-10 max-w-3xl">
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl font-body">
-          Frequently Asked Questions
-        </h1>
+        <h1>Frequently Asked Questions</h1>
         <p className="mt-4 text-lg">
           Clear answers on pricing, support, compliance, and platform features.
         </p>
@@ -213,7 +211,7 @@ function RouteComponent() {
             <Accordion type="multiple">
               {section.items.map((item, index) => (
                 <AccordionItem key={item.q} value={`${section.title}-${index}`}>
-                  <AccordionTrigger className="text-base sm:text-lg hover:no-underline hover:text-primary">
+                  <AccordionTrigger className="text-base sm:text-lg hover:no-underline hover:text-primary font-body">
                     {item.q}
                   </AccordionTrigger>
                   <AccordionContent>

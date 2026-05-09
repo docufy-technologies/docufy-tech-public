@@ -19,8 +19,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     id: "1",
     name: "Md Farhan Mahmud Moon",
     role: "Business and Management Development Advisor",
-    imageURL:
-      "https://media.licdn.com/dms/image/v2/D5603AQHX65G-W2Wiqg/profile-displayphoto-shrink_800_800/B56ZYvAjC.GsAg-/0/1744545396829?e=1779926400&v=beta&t=d2bAiRRhVJIVjMXLlMpeV9GDmZtKibLWqCVWwvVjgzo",
+    imageURL: "/moon.webp",
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/1farhanmahmud/",
       x: "https://x.com/1farhanmahmud",
@@ -30,8 +29,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     id: "2",
     name: "Sneha Salam",
     role: "Founder & Chief Executive Officer",
-    imageURL:
-      "https://pbs.twimg.com/profile_images/2045482389733093376/V3cuGEww_400x400.jpg",
+    imageURL: "/sneha.webp",
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/sneha-salam/",
       website: "https://snehasalam.com",
@@ -50,23 +48,20 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     id: "4",
     name: "Nazifa Zafrin Ahona",
     role: "Chief Operating Officer",
-    imageURL:
-      "https://media.licdn.com/dms/image/v2/D5603AQGcEnZdt9jr_Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1716370390138?e=1779926400&v=beta&t=jDjenP8txzj2mt0o5usAxTubPJPDV9k3kcRi3DssRss",
+    imageURL: "/ahona.webp",
     socialLinks: { linkedin: "https://www.linkedin.com/in/nazifazafrin/" },
   },
   {
     id: "5",
     name: "Md Izaz Uddin Ashik",
     role: "Chief Legal Officer",
-    imageURL:
-      "https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/384752243_3517824338482265_7583078482756085676_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeED5tYAe_PR5G1TJrp8sw7_aqxrjB5ZSblqrGuMHllJuWGTPv41sHzjR9et7CParJRXwOKellk-8lL-S_xtjeJw&_nc_ohc=-3vZ4_xfSzsQ7kNvwHwGCMo&_nc_oc=AdrNsozIimMelnGFztXH_f6X9MaSsYKJQNpKNUHCXhHtiZc0urUDMNrvh99bVo55_Ss&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=EekBHW9ExsXv8SRSfG-rxA&_nc_ss=7b2a8&oh=00_Af64JdMYJO-_KONTrEI68W-ziDVDbFzeYBG43Rfs-_GFwA&oe=6A0502C2",
+    imageURL: "/ashik.webp",
   },
   {
     id: "6",
     name: "Md Rakibul Hasan Ratul",
     role: "Chief Technology Officer",
-    imageURL:
-      "https://media.licdn.com/dms/image/v2/D5603AQF2iIQ0RRi1sg/profile-displayphoto-crop_800_800/B56Z1OF75TI8AI-/0/1775131675714?e=1779926400&v=beta&t=WXNDh4oPgZ_bgx8GMleEPntPZpTTpsXCU7RtTowZAwQ",
+    imageURL: "/ratul.webp",
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/rhasanratul",
       x: "https://x.com/RHasanRatul",
@@ -82,7 +77,7 @@ export function TeamShowcaseMobile({
   members = DEFAULT_MEMBERS,
 }: TeamShowcaseProps) {
   return (
-    <div className="sm:hidden flex flex-col justify-center items-center gap-8">
+    <div className="sm:hidden flex flex-col justify-center items-center gap-16">
       {members.map((member) => (
         <div
           key={member.id}
@@ -91,7 +86,7 @@ export function TeamShowcaseMobile({
           <img
             src={member.imageURL}
             alt={member.name}
-            className="size-36 rounded-full"
+            className="size-40 rounded-xl"
           />
           <div>
             <h3 className="text-lg font-medium">{member.name}</h3>

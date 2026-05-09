@@ -6,7 +6,7 @@ export const Route = createFileRoute("/privacy-policy")({
 
 function RouteComponent() {
   return (
-    <section className="max-w-3xl p-6 my-30 mx-auto *:font-body *:leading-relaxed [&>p,ul,li]:text-lg [&>ul]:list-disc">
+    <section className="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>p,ul,li]:text-lg [&>ul]:list-disc">
       <h1 className="text-4xl font-semibold mb-6">Privacy Policy</h1>
       <p>
         <strong>Docufy Tech</strong>
