@@ -22,7 +22,7 @@ function SolutionsCardCustom({
   icon: React.ReactNode;
 }) {
   return (
-    <div className="space-y-3 text-center bg-secondary/10">
+    <div className="space-y-3 text-center bg-secondary/30">
       <div className="relative mx-auto flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border items-center justify-center mb-4">
         {icon}
       </div>

@@ -86,7 +86,7 @@ export function TeamShowcaseMobile({
           <img
             src={member.imageURL}
             alt={member.name}
-            className="size-40 rounded-xl"
+            className="size-52 rounded-xl"
           />
           <div>
             <h3 className="text-lg font-medium">{member.name}</h3>
