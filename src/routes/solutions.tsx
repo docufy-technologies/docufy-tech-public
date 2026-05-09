@@ -35,10 +35,7 @@ function SolutionsCardCustom({
 
 function RouteComponent() {
   return (
-    <EtheralShadow
-      maskImageURL="/mask-1.png"
-      noise={{ opacity: 1, scale: 1.2 }}
-    >
+    <EtheralShadow noise={{ opacity: 1, scale: 1.2 }}>
       <div className="py-12 md:py-20 mt-10 max-sm:mt-20">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <span className="capitalize font-bold text-center text-xl lg:text-3xl flex max-sm:flex-col justify-center items-center gap-3">
