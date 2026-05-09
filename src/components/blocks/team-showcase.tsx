@@ -21,7 +21,10 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     role: "Business and Management Development Advisor",
     imageURL:
       "https://media.licdn.com/dms/image/v2/D5603AQHX65G-W2Wiqg/profile-displayphoto-shrink_800_800/B56ZYvAjC.GsAg-/0/1744545396829?e=1779926400&v=beta&t=d2bAiRRhVJIVjMXLlMpeV9GDmZtKibLWqCVWwvVjgzo",
-    socialLinks: { linkedin: "https://www.linkedin.com/in/1farhanmahmud/" },
+    socialLinks: {
+      linkedin: "https://www.linkedin.com/in/1farhanmahmud/",
+      x: "https://x.com/1farhanmahmud",
+    },
   },
   {
     id: "2",
