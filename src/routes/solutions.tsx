@@ -36,15 +36,9 @@ function RouteComponent() {
   return (
     <section className="py-12 md:py-20 mt-10 max-sm:mt-20">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-        <span className="capitalize font-bold text-center text-xl lg:text-3xl flex max-sm:flex-col justify-center items-center gap-3">
-          The Smart Solutions{" "}
-          <img
-            src="/logo512.png"
-            alt="Docufy Tech Logo"
-            className="h-4.5 max-sm:h-3"
-          />{" "}
-          Offers
-        </span>
+        <h2 className="capitalize leading-relaxed tracking-wider text-center">
+          The Smart Solutions Docufy Tech Offers
+        </h2>
 
         <div className="relative mx-auto grid max-w-6xl *:p-12 sm:grid-cols-2 lg:grid-cols-3 backdrop-blur-xl overflow-hidden gap-2">
           <SolutionsCardCustom
