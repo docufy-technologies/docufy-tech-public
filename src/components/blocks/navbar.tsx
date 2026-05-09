@@ -28,7 +28,9 @@ function NavBar() {
       <Tab setPosition={setPosition}>
         <Link to="/">Home</Link>
       </Tab>
-      <Tab setPosition={setPosition}>About</Tab>
+      <Tab setPosition={setPosition}>
+        <Link to="/about">About</Link>
+      </Tab>
       <Tab setPosition={setPosition}>
         <Link to="/solutions">Solutions</Link>
       </Tab>

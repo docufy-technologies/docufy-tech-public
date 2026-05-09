@@ -6,7 +6,7 @@ export const Route = createFileRoute("/terms-of-service")({
 
 function RouteComponent() {
   return (
-    <section className="max-w-3xl p-4 my-30 mx-auto *:font-body *:leading-relaxed [&>p,ul,li]:text-lg [&>ul]:list-disc">
+    <section className="max-w-3xl p-6 my-30 mx-auto *:font-body *:leading-relaxed [&>p,ul,li]:text-lg [&>ul]:list-disc">
       <h1 className="text-4xl font-bold mb-6">Terms of Service</h1>
 
       <p className="font-semibold">Docufy Tech</p>

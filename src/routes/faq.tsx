@@ -192,32 +192,9 @@ const faqSections = [
   },
 ] as const;
 
-const CONTACT_EMAIL = "info@tech.docufybd.com";
-
-function renderAnswer(answer: string) {
-  const [before, after] = answer.split(CONTACT_EMAIL);
-
-  if (after === undefined) {
-    return answer;
-  }
-
-  return (
-    <>
-      {before}
-      <a
-        href="mailto:info@tech.docufybd.com"
-        className="underline underline-offset-3"
-      >
-        {CONTACT_EMAIL}
-      </a>
-      {after}
-    </>
-  );
-}
-
 function RouteComponent() {
   return (
-    <section className="mx-auto max-w-4xl px-4 my-30 [&>h1,h2,h3,h4,h5,h6,p,span,ul,li]:font-body!">
+    <section className="mx-auto max-w-4xl px-6 py-30 mt-10 [&>h1,h2,h3,h4,h5,h6,p,span,ul,li]:font-body!">
       <div className="mb-10 max-w-3xl">
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl font-body">
           Frequently Asked Questions
@@ -230,7 +207,7 @@ function RouteComponent() {
       <div className="space-y-10">
         {faqSections.map((section) => (
           <div key={section.title} className="space-y-4">
-            <h2 className="text-2xl font-semibold tracking-tight text-secondary">
+            <h2 className="text-2xl font-medium tracking-tight text-accent">
               {section.title}
             </h2>
             <Accordion type="multiple">
@@ -241,7 +218,7 @@ function RouteComponent() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <p className="text-base sm:text-lg text-muted-foreground">
-                      {renderAnswer(item.a)}
+                      {item.a}
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -251,7 +228,7 @@ function RouteComponent() {
         ))}
       </div>
 
-      <p className="mt-12 text-sm text-muted-foreground">
+      <p className="mt-12 text-base sm:text-lg text-muted-foreground">
         Need a tailored quote? Reach us at{" "}
         <a
           href="mailto:info@tech.docufybd.com"
@@ -259,15 +236,6 @@ function RouteComponent() {
         >
           info@tech.docufybd.com
         </a>{" "}
-        or visit{" "}
-        <a
-          href="https://tech.docufybd.com"
-          target="_blank"
-          rel="noreferrer"
-          className="underline underline-offset-3"
-        >
-          tech.docufybd.com
-        </a>
         .
       </p>
     </section>

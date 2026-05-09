@@ -20,6 +20,20 @@ import { Sparkles } from "@/components/ui/sparkles";
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
+  const requestForQuoteMailContents = {
+    subject: encodeURIComponent("Request for Quotation"),
+    body: encodeURIComponent(
+      `Hi Docufy Tech Team,\n\nI'm reaching out to request a quotation.\n\nService Required:\n(delete the irrelevant options)\n[ ] New Website Build\n[ ] Bug Fix / Troubleshooting\n[ ] Website Migration\n[ ] UI/UX Redesign\n[ ] Performance Optimization\n[ ] Other: _______________\n\nProject Overview:\n(Brief description of what you need)\n\nExisting Assets:\nDo you have any of the following ready?\n[ ] Design files (Figma, Adobe XD, etc.)\n[ ] Brand guidelines / logo\n[ ] Content / copywriting\n[ ] Existing codebase or repository\n\nLinks For Existing Assets:\n(drop the links if applicable)\n\nCurrent Tech Stack (if applicable):\n(e.g., WordPress, React, Laravel, etc.)\n\nTimeline:\nExpected start date: _______________\nDeadline (if any): _______________\n\nAdditional Notes:\n[Anything else we should know]\n\nLooking forward to hearing from you.\n[Your Name]\n[Your Company]\n[Your Contact Number]`,
+    ),
+  };
+
+  const requestForDemoMailContents = {
+    subject: encodeURIComponent("Request for Demo"),
+    body: encodeURIComponent(
+      `Hi Docufy Tech Team,\n\nI'm reaching out to schedule a demo of your services.\n\nWhat I'd Like to See:\n(delete the irrelevant options)\n[ ] Website Build Process & Workflow\n[ ] UI/UX Design Capabilities\n[ ] Past Projects & Case Studies\n[ ] Performance & Optimization Work\n[ ] Migration Process\n[ ] Other: _______________\n\nAbout My Project:\n(Brief description of your project or business)\n\nAvailability:\nPreferred date(s): _______________\nPreferred time(s): _______________\nTimezone: _______________\n\nAdditional Notes:\n[Anything else we should know]\n\nLooking forward to connecting.\n[Your Name]\n[Your Company]\n[Your Contact Number]`,
+    ),
+  };
+
   return (
     <div className="max-w-screen">
       {/* hero section */}
@@ -58,8 +72,8 @@ function Home() {
               </p>
             </BracketContainer>
 
-            <div className="grid grid-cols-2 max-sm:flex max-sm:flex-col gap-4 max-sm:gap-2 w-full max-w-sm justify-center items-center">
-              <AnimatedButton size="lg" className="w-full">
+            <div className="grid grid-cols-2 max-sm:flex max-sm:flex-col gap-4 w-full max-w-sm justify-center items-center">
+              <AnimatedButton size="lg" variant="accent" className="w-full">
                 <a
                   href="https://calendly.com/docufytechnologies/30min"
                   target="_blank"
@@ -283,28 +297,34 @@ function Home() {
 
       {/* tech stack section */}
       <section id="tech-stack-section" className="h-fit max-w-screen">
-        <div className="flex flex-col justify-center items-center gap-6 py-16">
+        <div className="flex flex-col justify-center items-center gap-14 py-14 sm:py-24">
           <h1 className="uppercase max-sm:text-2xl">Languages We Use</h1>
-          <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:justify-start max-sm:items-start justify-center items-center gap-8 text-center [&>.tabler-icon]:size-8 [&>.tabler-icon]:text-foreground/70 *:font-medium *:text-lg">
+          <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:justify-start max-sm:items-start justify-center items-center gap-16 text-center">
             <div className="flex justify-center items-center gap-2">
-              <IconBrandHtml5 title="HTML5" />
-              <p>HTML5</p>
+              <IconBrandHtml5 title="HTML5" className="size-8 sm:size-10" />
+              <p className="text-xl sm:text-2xl">HTML5</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandCss3 title="CSS3" />
-              <p>CSS3</p>
+              <IconBrandCss3 title="CSS3" className="size-8 sm:size-10" />
+              <p className="text-xl sm:text-2xl">CSS3</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandJavascript title="JavaScript" />
-              <p>JavaScript</p>
+              <IconBrandJavascript
+                title="JavaScript"
+                className="size-8 sm:size-10"
+              />
+              <p className="text-xl sm:text-2xl">JavaScript</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandTypescript title="TypeScript" />
-              <p>TypeScript</p>
+              <IconBrandTypescript
+                title="TypeScript"
+                className="size-8 sm:size-10"
+              />
+              <p className="text-xl sm:text-2xl">TypeScript</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandPython title="Python" />
-              <p>Python</p>
+              <IconBrandPython title="Python" className="size-8 sm:size-10" />
+              <p className="text-xl sm:text-2xl">Python</p>
             </div>
           </div>
         </div>
@@ -322,14 +342,18 @@ function Home() {
             </h1>
           </div>
           <div
-            className="mt-14 mx-auto w-fit flex gap-x-8 gap-y-2 justify-center items-center"
+            className="mt-14 mx-auto w-fit flex gap-x-6 md:gap-x-12 gap-y-2 justify-center items-center pb-10"
             id="partners-logo"
           >
-            <img src="/nnologo.png" alt="NNO Logo" className="h-12 w-auto" />
             <img
-              src="/docufy-logo-alabaster.svg"
-              alt="NNO Logo"
-              className="h-28 w-auto"
+              src="/docufy-logo.png"
+              alt="Docufy Logo"
+              className="h-8 md:h-10 w-auto"
+            />
+            <img
+              src="/diesel-power.png"
+              alt="Diesel Power Logo"
+              className="h-8 md:h-10 w-auto"
             />
           </div>
         </div>
@@ -343,20 +367,34 @@ function Home() {
         </div>
       </section>
 
-      {/* final cta section */}
+      {/* final CTA section */}
       <section
-        id="final-cta-section"
-        className="h-fit w-fit max-w-2xl mx-auto mb-20 p-4"
+        id="final-CTA-section"
+        className="h-fit w-fit max-w-2xl mx-auto mb-20 px-12"
       >
-        <p className="text-xl text-center mb-4">
+        <p className="text-base text-center mb-4">
           One less thing to worry. Let Docufy Tech handle it for you.
         </p>
-        <div className="flex gap-6 justify-center items-center">
-          <AnimatedButton variant="outline" className="uppercase">
-            Request A Quote
+        <div className="flex gap-6 justify-center items-center max-sm:flex-col max-w-sm">
+          <AnimatedButton variant="accent" className="w-full">
+            <a
+              href={`mailto:info@tech.docufybd.com?subject=${requestForQuoteMailContents.subject}&body=${requestForQuoteMailContents.body}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-full flex justify-center items-center"
+            >
+              Request A Quote
+            </a>
           </AnimatedButton>
-          <AnimatedButton variant="outline" className="uppercase">
-            Request A Demo
+          <AnimatedButton variant="outline" className="w-full">
+            <a
+              href={`mailto:info@tech.docufybd.com?subject=${requestForDemoMailContents.subject}&body=${requestForDemoMailContents.body}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-full flex justify-center items-center"
+            >
+              Request A Demo
+            </a>
           </AnimatedButton>
         </div>
       </section>
