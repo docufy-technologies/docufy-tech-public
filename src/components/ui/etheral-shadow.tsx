@@ -63,7 +63,7 @@ export function EtheralShadow({
   style,
   className,
   children,
-  maskImageURL = "/mask-3.png",
+  maskImageURL = "/mask-2.png",
   opacity = 1,
 }: ShadowOverlayProps) {
   const animation = { scale: 100, speed: 90 } as AnimationConfig;
