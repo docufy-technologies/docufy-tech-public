@@ -6,525 +6,265 @@ export const Route = createFileRoute("/privacy-policy")({
 
 function RouteComponent() {
   return (
-    <section className="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>p,ul,li]:text-lg [&>ul]:list-disc">
-      <h1 className="text-4xl font-semibold mb-6">Privacy Policy</h1>
+    <section className="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>h1,h2,h3,h4,h5,h6]:mb-2 [&>h1,h2,h3,h4,h5,h6]:mt-8 [&>p,ul,li]:text-lg [&>ul,li]:list-disc [&>ul]:mt-0 [&>p]:my-4">
+      <h1>Privacy Policy</h1>
+      <p className="pt-4">
+        <b>Docufy Tech</b>
+      </p>
+      <p>Effective Date: May 20, 2026</p>
+      <p>Last updated: May 20, 2026</p>
+      <p className="pt-8">
+        This Privacy Policy explains how Docufy Tech collects, uses, discloses,
+        stores, and protects information when you visit tech.docufybd.com and
+        any related pages, links, emails, Calendly pages, or other
+        communications we provide in connection with the Website (the{" "}
+        <b>"Website"</b>). It should be read together with our Terms of Service.
+      </p>
+
+      <h2>1. Who We Are</h2>
       <p>
-        <strong>Docufy Tech</strong>
+        Docufy Tech is the web development services subsidiary and operating
+        brand of Docufy. The Website is a static, informational, and
+        conversion-focused marketing site designed to present our capabilities,
+        build credibility, and invite project discussions.
       </p>
 
+      <h2>2. Scope of This Policy</h2>
       <p>
-        <strong>Effective Date:</strong> May 07, 2026
+        This Policy applies to visitors, prospects, and other individuals who
+        interact with us through the Website, our email links, our Calendly
+        links, and related communications.
       </p>
-      <p className="mb-8">
-        <strong>Last Updated:</strong> May 07, 2026
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">Introduction</h2>
-
-      <p className="mb-4">
-        Docufy Tech (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is
-        committed to protecting the privacy and confidentiality of our clients
-        and users. This privacy policy describes how we collect, use, disclose,
-        and safeguard information when you use our technical documentation
-        services (Project Overview, Business Requirement Specification, Software
-        Requirement Specification, Functional Requirement Document, Product
-        Requirement Document) and web development services.
+      <p>
+        It does not apply to separate client systems, third-party websites, or
+        services that we do not control. If you follow a link to a third-party
+        service, that service's own privacy policy will apply.
       </p>
 
-      <p className="mb-4">
-        This policy applies globally to all clients, including those located
-        outside Bangladesh. We comply with applicable privacy laws in your
-        jurisdiction where required, in addition to Bangladesh regulations.
+      <h2>3. Information We Collect</h2>
+      <p>
+        Because the Website, currently, is informational and does not currently
+        provide user accounts, a checkout flow, or a backend intake form, we
+        generally collect limited information.
       </p>
 
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Information We Collect
-      </h2>
-
-      <p className="mb-4">
-        We collect the following types of information, categorized by source and
-        purpose:
-      </p>
-
-      <h3 className="text-2xl font-semibold mt-8 mb-4">
-        Personal and Contact Information
-      </h3>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>Name, email address, phone number, and business address</li>
-        <li>Job title, company role, and organizational hierarchy details</li>
-        <li>Billing and payment information</li>
+      <h3>Information you provide directly</h3>
+      <p>We may collect information that you choose to send us, including:</p>
+      <ul>
+        <li>name</li>
+        <li>company name</li>
+        <li>email address</li>
+        <li>phone number</li>
+        <li>message content</li>
+        <li>project details, scope notes, and timelines</li>
         <li>
-          Government-issued identification (where required for KYC compliance
-          under Bangladesh law)
+          files, links, briefs, designs, code, or other materials you choose to
+          share
         </li>
+        <li>booking details and notes submitted through Calendly</li>
+      </ul>
+      <p>
+        Please do not send sensitive personal data unless we request it or you
+        have a separate confidentiality agreement with us.
+      </p>
+
+      <h3>Information from third parties</h3>
+      <p>
+        We may receive information from third-party services that help us
+        operate the Website or communicate with you, such as:
+      </p>
+      <ul>
+        <li>Calendly or similar scheduling tools</li>
+        <li>email providers</li>
+        <li>hosting providers</li>
+        <li>font delivery services</li>
+        <li>other tools we rely on to run the Website or handle enquiries</li>
       </ul>
 
-      <h3 className="text-2xl font-semibold mt-8 mb-4">
-        Technical Documentation and Project Data
-      </h3>
-
-      <p className="mb-4">
-        Collected during our technical documentation services (BRS, SRS, FRD,
-        PRD, Project Overview):
-      </p>
-
-      <ul className="pl-6 mb-6 space-y-2">
+      <h2>4. How We Use Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>respond to quote requests, demo requests, and general enquiries</li>
+        <li>schedule and manage meetings</li>
+        <li>review project scope, requirements, and supporting materials</li>
+        <li>communicate about potential or active engagements</li>
+        <li>maintain business records</li>
+        <li>improve Website performance, security, and reliability</li>
         <li>
-          Project requirements, business process workflows, and stakeholder
-          mappings
+          detect, prevent, and investigate fraud, abuse, or security issues
         </li>
         <li>
-          Technical environment details (tech stack, infrastructure specs, API
-          endpoints)
-        </li>
-        <li>User personas, journey maps, and functional specifications</li>
-        <li>
-          Source code snippets, algorithms, and proprietary technical data
-        </li>
-        <li>Project timelines, milestones, and approval records</li>
-        <li>
-          Feedback, revision notes, and communication logs related to
-          deliverables
+          comply with legal, tax, accounting, and recordkeeping obligations
         </li>
       </ul>
+      <p>
+        Where data protection law requires a lawful basis, we process personal
+        data based on your consent, our legitimate business interests, steps
+        taken at your request before entering into a contract, performance of a
+        contract, or compliance with legal obligations, as applicable.
+      </p>
 
-      <h3 className="text-2xl font-semibold mt-8 mb-4">
-        Web Development Service Data
-      </h3>
+      <h2>5. Cookies and Similar Technologies</h2>
+      <p>
+        The Website may use cookies or similar technologies through our hosting
+        provider or third-party services to operate the site, support security,
+        or measure basic performance.
+      </p>
+      <p>
+        If a third-party service places its own cookies, that service's privacy
+        policy will govern those cookies. You can usually manage cookies through
+        your browser settings.
+      </p>
 
-      <p className="mb-4">Collected during web development projects:</p>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>System access credentials (SSH keys, admin passwords, API keys)</li>
+      <h2>6. How We Share Information</h2>
+      <p>We may share information with:</p>
+      <ul>
         <li>
-          Repository access (GitHub/GitLab/Bitbucket OAuth tokens or
-          credentials)
+          Docufy personnel, founders, employees, and contractors who need the
+          information to respond to your enquiry or deliver services
         </li>
         <li>
-          Cloud infrastructure access (AWS/Azure/GCP credentials, server
-          details)
+          service providers that help us operate the Website, communicate with
+          you, or manage bookings
         </li>
         <li>
-          Third-party service keys (payment gateways, analytics tools, email
-          services)
+          third-party platforms such as Calendly, email providers, hosting
+          providers, and similar tools
         </li>
         <li>
-          Client customer data (if processing end-user data for consumer-facing
-          apps)
+          legal, regulatory, or law enforcement authorities when required by
+          applicable law, court order, or lawful request, including under
+          Bangladesh law such as the Information and Communication Technology
+          Act, 2006 and the Cyber Security Act, 2023, as applicable
+        </li>
+        <li>
+          professional advisers, auditors, or consultants where needed for
+          business or legal purposes
+        </li>
+        <li>
+          parties to a merger, acquisition, reorganization, or similar business
+          transaction, if applicable
         </li>
       </ul>
+      <p>We do not sell your personal data.</p>
 
-      <h3 className="text-2xl font-semibold mt-8 mb-4">
-        Automatically Collected Information
-      </h3>
+      <h2>7. Confidentiality and Project Materials</h2>
+      <p>
+        When you send project briefs, BRDs, PRDs, FRDs, SRSs, designs, code, or
+        other materials, we use them only to evaluate, communicate, and deliver
+        the requested service.
+      </p>
+      <p>
+        If a separate NDA or written agreement applies, that agreement controls
+        to the extent of any conflict with this Policy.
+      </p>
+      <p>
+        We ask that you avoid sharing confidential or highly sensitive
+        information unless we request it or a separate confidentiality agreement
+        is in place.
+      </p>
 
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>IP addresses, device information, and browser type/version</li>
-        <li>Website visit data (pages viewed, time spent, referring URLs)</li>
-        <li>Cookies and similar tracking technologies (see Cookies section)</li>
+      <h2>8. Data Retention</h2>
+      <p>
+        If no formal engagement begins, preliminary enquiry data is generally
+        retained for no longer than 90 days after discussions conclude, unless a
+        longer retention period is required by law, dispute resolution needs, or
+        legitimate business records.
+      </p>
+      <p>
+        If an engagement begins, records may be retained for as long as needed
+        for service delivery, business administration, tax and accounting
+        purposes, legal compliance, and dispute resolution.
+      </p>
+
+      <h2>9. Security</h2>
+      <p>
+        We use reasonable administrative, technical, and organizational
+        safeguards that are appropriate to the nature of the information we
+        handle. No online system is completely secure, so we cannot guarantee
+        absolute security.
+      </p>
+
+      <h2>10. International Transfers</h2>
+      <p>
+        Your information may be processed in Bangladesh or in other countries
+        where our service providers operate.
+      </p>
+      <p>
+        Where required, we take reasonable steps to protect the information
+        during transfer and processing.
+      </p>
+
+      <h2>11. Your Rights and Choices</h2>
+      <p>
+        Depending on where you live and the law that applies, you may have the
+        right to:
+      </p>
+      <ul>
+        <li>request access to your personal data</li>
+        <li>request correction of inaccurate information</li>
+        <li>request deletion of your personal data</li>
+        <li>request restriction of processing</li>
+        <li>object to processing in some situations</li>
+        <li>withdraw consent where processing is based on consent</li>
+        <li>request a copy of your personal data, where applicable</li>
       </ul>
-
-      <h3 className="text-2xl font-semibold mt-8 mb-4">Communication Data</h3>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>Emails, chat messages, video call recordings, and meeting notes</li>
-        <li>Support tickets, survey responses, and feedback submissions</li>
-      </ul>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        How We Use Your Information
-      </h2>
-
-      <p className="mb-4">
-        We use collected information for the following purposes, aligned with
-        Bangladesh legal requirements and, where applicable, international
-        privacy regulations (e.g., GDPR, CCPA) for foreign clients:
+      <p>
+        To make a request, contact us at{" "}
+        <a
+          href="mailto:info@tech.docufybd.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          info@tech.docufybd.com
+        </a>
+        . We may need to verify your identity before responding, and we may keep
+        a record of the request if required by law.
+      </p>
+      <p>
+        If we ever send you promotional or non-essential messages, you can ask
+        us to stop by replying to the message or contacting us directly or
+        unsubscribing to it.
       </p>
 
-      <ol className="list-decimal pl-6 mb-6 space-y-3">
-        <li>
-          Service Delivery: Create technical documentation deliverables, build
-          web development projects, and manage project timelines/milestones.
-        </li>
-        <li>
-          Communication: Coordinate with stakeholders, share project updates,
-          and provide customer support.
-        </li>
-        <li>
-          Billing and Compliance: Process payments, issue invoices, and maintain
-          financial records per the Income Tax Ordinance 1984 (6-year retention
-          requirement).
-        </li>
-        <li>
-          Security and Improvement: Protect our systems, detect fraud, and
-          enhance service quality per the Cyber Security Act 2023.
-        </li>
-        <li>
-          Legal Obligations: Comply with the Companies Act 1994, Digital
-          Security Act 2018, and other applicable Bangladesh regulations.
-        </li>
-      </ol>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Data Sharing and Disclosure
-      </h2>
-
-      <p className="mb-4">
-        We do not sell your personal information. We may share data in these
-        circumstances:
+      <h2>12. Children's Privacy</h2>
+      <p>
+        The Website is intended for business and professional use and is not
+        directed to children under 18. We do not knowingly collect personal data
+        from children.
       </p>
 
-      <h3 className="text-2xl font-semibold mt-8 mb-4">Service Providers</h3>
-
-      <p className="mb-4">
-        We engage trusted third-party vendors to support service delivery,
-        including:
+      <h2>13. Changes to This Policy</h2>
+      <p>
+        We may update this Policy from time to time. The revised version will
+        apply when it is posted on the Website with an updated effective date.
+      </p>
+      <p>
+        Your continued use of the Website after the updated version is posted
+        means you accept the revised Policy, to the extent permitted by law.
       </p>
 
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>
-          Cloud hosting (Google Drive, Microsoft OneDrive, Dropbox Business)
-        </li>
-        <li>Project management tools (Jira, Trello, Asana, Monday.com)</li>
-        <li>
-          Communication platforms (Slack, Microsoft Teams, Zoom, Google Meet)
-        </li>
-        <li>
-          Payment processors (Stripe, PayPal, Wise, local banking partners)
-        </li>
-        <li>Development tools (GitHub, GitLab, Figma, Postman)</li>
-      </ul>
-
-      <p className="mb-4">
-        All third parties are bound by strict confidentiality agreements aligned
-        with our privacy standards.
+      <h2>14. Contact Us</h2>
+      <p>
+        If you have questions about this Policy or want to exercise your privacy
+        rights, contact us at:
       </p>
-
-      <h3 className="text-2xl font-semibold mt-8 mb-4">Legal Requirements</h3>
-
-      <p className="mb-4">
-        We disclose information when required by Bangladesh law, including:
+      <p>Docufy Tech</p>
+      <p>
+        Email:{" "}
+        <a
+          href="mailto:info@tech.docufybd.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          info@tech.docufybd.com
+        </a>
       </p>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>
-          Compliance with the Cyber Security Act 2023 and Digital Security Act
-          2018
-        </li>
-        <li>
-          Responding to lawful requests from public authorities like the
-          Bangladesh Telecommunication Regulatory Commission (BTRC)
-        </li>
-        <li>Protecting our legal rights, property, or safety</li>
-      </ul>
-
-      <h3 className="text-2xl font-semibold mt-8 mb-4">Business Transfers</h3>
-
-      <p className="mb-4">
-        In case of merger, acquisition, or sale of company assets, your
-        information may be transferred as a business asset, with continued
-        privacy protections.
-      </p>
-
-      <h3 className="text-2xl font-semibold mt-8 mb-4">
-        Cross-Border Transfers
-      </h3>
-
-      <p className="mb-4">
-        For international clients, we transfer data outside Bangladesh only with
-        appropriate safeguards per the Cyber Security Act 2023 and applicable
-        foreign privacy laws:
-      </p>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>
-          For EU/EEA clients: Transfers use EU Standard Contractual Clauses
-          (SCCs), rely on EU adequacy decisions, or comply with the EU-US Data
-          Privacy Framework (DPF) where applicable.
-        </li>
-        <li>
-          For US clients: Comply with the California Consumer Privacy Act (CCPA)
-          and other state-level privacy laws.
-        </li>
-        <li>
-          For other jurisdictions: Follow local data transfer regulations and
-          conduct Transfer Impact Assessments (TIAs) for high-risk transfers.
-        </li>
-        <li>
-          All transfers use AES-256 encryption for data at rest and TLS 1.3 for
-          data in transit.
-        </li>
-      </ul>
-
-      <h3 className="text-2xl font-semibold mt-8 mb-4">With Your Consent</h3>
-
-      <p className="mb-4">
-        We share information with third parties only when you provide explicit
-        written consent.
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Confidentiality Provisions for Technical Documentation
-      </h2>
-
-      <p className="mb-4">
-        Given the sensitive nature of our technical documentation services, we
-        maintain strict confidentiality standards:
-      </p>
-
-      <ol className="list-decimal pl-6 mb-6 space-y-3">
-        <li>
-          No Reuse: All client project documentation, requirement
-          specifications, and proprietary information are never reused,
-          reverse-engineered, or shared with other clients.
-        </li>
-        <li>
-          Personnel Obligations: All employees, contractors, and subcontractors
-          with access to client data are bound by enforceable confidentiality
-          agreements.
-        </li>
-        <li>
-          Data Segregation: Client data is logically separated from other
-          projects to prevent accidental exposure.
-        </li>
-        <li>
-          Return or Destruction: Upon project completion or termination, client
-          documentation is either returned or securely destroyed per the
-          Contract Act 1872 and our data retention policy.
-        </li>
-      </ol>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">Data Security</h2>
-
-      <p className="mb-4">
-        We implement industry-standard technical and organizational measures to
-        protect your data per the Cyber Security Act 2023:
-      </p>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>
-          AES-256 encryption for data at rest, TLS 1.3 for data in transit
-        </li>
-        <li>
-          Role-based access controls limiting data access to authorized
-          personnel only
-        </li>
-        <li>
-          Quarterly security audits and annual third-party penetration testing
-        </li>
-        <li>Mandatory data protection training for all staff</li>
-        <li>
-          24-hour breach notification commitment: We will notify you of any
-          confirmed data breach within 24 hours, provide technical forensics
-          support, and work alongside your incident response team.
-        </li>
-      </ul>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">User Rights</h2>
-
-      <p className="mb-4">
-        Depending on your jurisdiction, you have the following rights under
-        Bangladesh law and applicable international privacy regulations (e.g.,
-        GDPR, CCPA):
-      </p>
-
-      <ol className="list-decimal pl-6 mb-6 space-y-3">
-        <li>
-          Access: Request a copy of all personal information we hold about you.
-        </li>
-        <li>
-          Correction: Request correction of inaccurate or incomplete data.
-        </li>
-        <li>
-          Deletion: Request deletion of personal information, subject to legal
-          retention requirements (6 years for financial records per Income Tax
-          Ordinance 1984, or longer if required by your local law).
-        </li>
-        <li>
-          Portability: Request a structured, machine-readable copy of your data
-          where technically feasible (mandatory under GDPR for EU clients).
-        </li>
-        <li>
-          Withdraw Consent: Withdraw consent for data processing at any time,
-          without affecting prior lawful processing.
-        </li>
-        <li>
-          Opt-Out of Sale/Sharing: For California clients, opt out of the sale
-          or sharing of your personal information under CCPA.
-        </li>
-        <li>
-          Audit: Enterprise clients may request third-party audits of our data
-          handling practices per our service agreements.
-        </li>
-      </ol>
-
-      <p className="mb-4">
-        To exercise these rights, contact us through our website contact form.
-        EU clients may also contact our designated GDPR representative (to be
-        appointed upon request).
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Cookies and Tracking
-      </h2>
-
-      <p className="mb-4">
-        Our website uses cookies for the following purposes:
-      </p>
-
-      <ol className="list-decimal pl-6 mb-6 space-y-3">
-        <li>Essential Cookies: Required for core website functionality.</li>
-        <li>
-          Analytics Cookies: Track website usage via tools like Google Analytics
-          to improve user experience.
-        </li>
-        <li>
-          Preference Cookies: Remember your settings and customization choices.
-        </li>
-      </ol>
-
-      <p className="mb-4">
-        For users in jurisdictions with cookie consent laws (e.g., EU, UK,
-        California), we obtain explicit consent before placing non-essential
-        cookies on your device. You can withdraw consent at any time via our
-        cookie preference manager.
-      </p>
-
-      <p className="mb-4">
-        You can manage cookie preferences via your browser settings. Disabling
-        certain cookies may limit website functionality.
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Third-Party Services
-      </h2>
-
-      <p className="mb-4">
-        We integrate with third-party tools that collect information
-        independently, including:
-      </p>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>Cloud storage providers (Google Workspace, Microsoft 365)</li>
-        <li>Payment processors (Stripe, PayPal)</li>
-        <li>Analytics providers (Google Analytics, HubSpot)</li>
-        <li>Development tools (GitHub, Figma)</li>
-      </ul>
-
-      <p className="mb-4">
-        These parties have their own privacy policies, which we encourage you to
-        review.
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">Data Retention</h2>
-
-      <p className="mb-4">
-        We retain information for the following periods per Bangladesh law:
-      </p>
-
-      <ol className="list-decimal pl-6 mb-6 space-y-3">
-        <li>
-          Project Documentation: Retained for the project duration plus 3 years,
-          unless a longer period is required by contract or law.
-        </li>
-        <li>
-          Financial Records: Retained for 6 years per the Income Tax Ordinance
-          1984.
-        </li>
-        <li>
-          Company Records: Retained per the Companies Act 1994 requirements.
-        </li>
-        <li>
-          Website Data: Retained for 1 year, or longer for security
-          investigations under the Cyber Security Act 2023.
-        </li>
-        <li>
-          Personal Information: Retained only as long as necessary for the
-          purposes collected, unless a longer retention period is legally
-          required.
-        </li>
-      </ol>
-
-      <p className="mb-4">
-        Upon retention period expiry, data is securely deleted or anonymized.
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        International Data Transfers
-      </h2>
-
-      <p className="mb-4">
-        For clients outside Bangladesh, we transfer data only with appropriate
-        safeguards aligned with both Bangladesh law and your local privacy
-        regulations:
-      </p>
-
-      <ul className="pl-6 mb-6 space-y-2">
-        <li>
-          EU/EEA Clients: Transfers comply with GDPR Articles 44-46 via EU
-          Standard Contractual Clauses (SCCs), adequacy decisions, or the EU-US
-          Data Privacy Framework (DPF). We conduct Transfer Impact Assessments
-          (TIAs) for all high-risk transfers.
-        </li>
-        <li>
-          US Clients: Comply with CCPA, CPRA, and other applicable state privacy
-          laws. We do not sell personal information as defined under CCPA.
-        </li>
-        <li>
-          Other Jurisdictions: Follow local data transfer rules, including
-          obtaining explicit consent for transfers where required.
-        </li>
-        <li>
-          All transfers use AES-256 encryption for data at rest and TLS 1.3 for
-          data in transit.
-        </li>
-        <li>
-          Regular compliance audits of cross-border transfer practices, with
-          audit reports available to enterprise clients upon request.
-        </li>
-      </ul>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Updates to This Policy
-      </h2>
-
-      <p className="mb-4">
-        We may update this policy periodically to reflect changes in our
-        practices or Bangladesh legal requirements. Material changes will be
-        posted on our website with a new &quot;Last Updated&quot; date. We
-        encourage you to review this policy regularly.
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">
-        Governing Law and Jurisdiction
-      </h2>
-
-      <p className="mb-4">
-        This privacy policy is primarily governed by the laws of Bangladesh. Any
-        disputes arising from this policy are subject to the exclusive
-        jurisdiction of the courts of Bangladesh, except where mandatory
-        provisions of your local privacy laws (e.g., GDPR, CCPA) require
-        otherwise. In such cases, the mandatory local provisions will apply to
-        the extent required by law.
-      </p>
-
-      <h2 className="text-3xl font-semibold mt-12 mb-4">Legal Disclaimer</h2>
-
-      <p className="mb-4">
-        This privacy policy is provided for informational purposes only and does
-        not constitute formal legal advice. While we have aligned this document
-        with applicable Bangladesh laws including the Cyber Security Act 2023,
-        Digital Security Act 2018, Right to Information Act 2009, and
-        international privacy regulations (GDPR, CCPA) for foreign clients, you
-        should review it with a qualified legal professional in your
-        jurisdiction before implementation.
-      </p>
-
-      <p className="mb-4">
-        Docufy Tech is not liable for any damages arising from the use of this
-        policy template without proper legal review and customization to your
-        specific business circumstances and applicable jurisdictions.
+      <p>
+        Website:{" "}
+        <a href="https://tech.docufybd.com" target="_blank" rel="noreferrer">
+          https://tech.docufybd.com
+        </a>
       </p>
     </section>
   );
