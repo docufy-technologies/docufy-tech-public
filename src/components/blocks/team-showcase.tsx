@@ -8,8 +8,8 @@ export interface TeamMember {
   role: string;
   imageURL: string;
   socialLinks?: {
-    x?: string;
-    linkedin?: string;
+    X?: string;
+    LinkedIn?: string;
     website?: string;
   };
 }
@@ -21,8 +21,8 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     role: "Business and Management Development Advisor",
     imageURL: "/moon.webp",
     socialLinks: {
-      linkedin: "https://www.linkedin.com/in/1farhanmahmud/",
-      x: "https://x.com/1farhanmahmud",
+      LinkedIn: "https://www.linkedin.com/in/1farhanmahmud/",
+      X: "https://x.com/1farhanmahmud",
     },
   },
   {
@@ -31,9 +31,9 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     role: "Founder & Chief Executive Officer",
     imageURL: "/sneha.webp",
     socialLinks: {
-      linkedin: "https://www.linkedin.com/in/sneha-salam/",
+      LinkedIn: "https://www.linkedin.com/in/sneha-salam/",
       website: "https://snehasalam.com",
-      x: "https://x.com/SalamSneha",
+      X: "https://x.com/SalamSneha",
     },
   },
   {
@@ -42,20 +42,23 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     role: "Chief Communications Officer",
     imageURL:
       "https://media.licdn.com/dms/image/v2/D5603AQH1jS9W4Cvyjw/profile-displayphoto-crop_800_800/B56Zoe0hmfH8AI-/0/1761453678008?e=1779926400&v=beta&t=-OHcDb_EgCRLATHoR__m1KRVTT17CihH4B725T2GhQI",
-    socialLinks: { linkedin: "https://www.linkedin.com/in/ferdoushassan280/" },
+    socialLinks: { LinkedIn: "https://www.linkedin.com/in/ferdoushassan280/" },
   },
   {
     id: "4",
     name: "Nazifa Zafrin Ahona",
     role: "Chief Operating Officer",
     imageURL: "/ahona.webp",
-    socialLinks: { linkedin: "https://www.linkedin.com/in/nazifazafrin/" },
+    socialLinks: { LinkedIn: "https://www.linkedin.com/in/nazifazafrin/" },
   },
   {
     id: "5",
     name: "Md Izaz Uddin Ashik",
     role: "Chief Legal Officer",
     imageURL: "/ashik.webp",
+    socialLinks: {
+      LinkedIn: "https://www.linkedin.com/in/md-izaz-uddin-258788121/",
+    },
   },
   {
     id: "6",
@@ -63,8 +66,8 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     role: "Chief Technology Officer",
     imageURL: "/ratul.webp",
     socialLinks: {
-      linkedin: "https://www.linkedin.com/in/rhasanratul",
-      x: "https://x.com/RHasanRatul",
+      LinkedIn: "https://www.linkedin.com/in/rhasanratul",
+      X: "https://x.com/RHasanRatul",
     },
   },
 ];
@@ -92,9 +95,9 @@ export function TeamShowcaseMobile({
             <h3 className="text-lg font-medium">{member.name}</h3>
             {member.socialLinks && (
               <div className="flex justify-center items-center">
-                {member.socialLinks?.linkedin && (
+                {member.socialLinks?.LinkedIn && (
                   <a
-                    href={member.socialLinks.linkedin}
+                    href={member.socialLinks.LinkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
@@ -104,9 +107,9 @@ export function TeamShowcaseMobile({
                     <IconBrandLinkedin size={20} />
                   </a>
                 )}
-                {member.socialLinks?.x && (
+                {member.socialLinks?.X && (
                   <a
-                    href={member.socialLinks.x}
+                    href={member.socialLinks.X}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
@@ -287,9 +290,9 @@ function MemberRow({
                 : "opacity-0 -translate-x-2 pointer-events-none",
             )}
           >
-            {member.socialLinks?.linkedin && (
+            {member.socialLinks?.LinkedIn && (
               <a
-                href={member.socialLinks.linkedin}
+                href={member.socialLinks.LinkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
@@ -299,9 +302,9 @@ function MemberRow({
                 <IconBrandLinkedin size={20} />
               </a>
             )}
-            {member.socialLinks?.x && (
+            {member.socialLinks?.X && (
               <a
-                href={member.socialLinks.x}
+                href={member.socialLinks.X}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
