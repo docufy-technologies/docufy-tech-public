@@ -301,29 +301,23 @@ function Home() {
           <h1 className="uppercase max-sm:text-2xl">Languages We Use</h1>
           <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:justify-start max-sm:items-start justify-center items-center gap-16 text-center">
             <div className="flex justify-center items-center gap-2">
-              <IconBrandHtml5 title="HTML5" className="size-8 sm:size-10" />
+              <IconBrandHtml5 title="HTML5" className="size-8" />
               <p className="text-xl sm:text-2xl">HTML5</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandCss3 title="CSS3" className="size-8 sm:size-10" />
+              <IconBrandCss3 title="CSS3" className="size-8" />
               <p className="text-xl sm:text-2xl">CSS3</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandJavascript
-                title="JavaScript"
-                className="size-8 sm:size-10"
-              />
+              <IconBrandJavascript title="JavaScript" className="size-8" />
               <p className="text-xl sm:text-2xl">JavaScript</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandTypescript
-                title="TypeScript"
-                className="size-8 sm:size-10"
-              />
+              <IconBrandTypescript title="TypeScript" className="size-8" />
               <p className="text-xl sm:text-2xl">TypeScript</p>
             </div>
             <div className="flex justify-center items-center gap-2">
-              <IconBrandPython title="Python" className="size-8 sm:size-10" />
+              <IconBrandPython title="Python" className="size-8" />
               <p className="text-xl sm:text-2xl">Python</p>
             </div>
           </div>

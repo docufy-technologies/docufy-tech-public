@@ -108,10 +108,7 @@ function RouteComponent() {
           text="We are committed to delivering high-quality web applications that meet
         your needs."
         />
-        <AnimatedButton
-          className="uppercase sm:px-12 font-bold"
-          variant="accent"
-        >
+        <AnimatedButton variant="accent">
           <a
             href="https://calendly.com/docufytechnologies/30min"
             target="_blank"

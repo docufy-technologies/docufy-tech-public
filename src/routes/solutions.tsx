@@ -26,7 +26,7 @@ function SolutionsCardCustom({
       <div className="relative mx-auto flex aspect-square size-12 rounded-full border before:absolute before:-inset-2 before:rounded-full before:border items-center justify-center mb-4">
         {icon}
       </div>
-      <span className="text-xl font-semibold text-balance">{title}</span>
+      <h3 className="text-xl">{title}</h3>
       <p className="text-base mt-2 leading-tight">{description}</p>
     </div>
   );
