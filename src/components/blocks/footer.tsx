@@ -36,7 +36,7 @@ export default function Footer() {
     <footer className="pb-16">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <FooterAnchor label="Who We Are" href="https://docufybd.com" />
+          <FooterAnchor label="Who We Are" href="https://docufybd.com/about" />
           <FooterLink label="Terms of Service" to="/terms-of-service" />
           <FooterLink label="Privacy Policy" to="/privacy-policy" />
         </div>
@@ -89,8 +89,8 @@ export default function Footer() {
         </div>
         <span className="text-muted-foreground block text-center text-base font-bold">
           {" "}
-          © {new Date().getFullYear()} <Link to="/">Docufy Tech</Link>, All
-          rights reserved
+          © {new Date().getFullYear()} <a href="https://docufybd.com">Docufy</a>
+          , All rights reserved
         </span>
       </div>
     </footer>
