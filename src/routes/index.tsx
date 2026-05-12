@@ -299,7 +299,7 @@ function Home() {
       <section id="tech-stack-section" className="h-fit max-w-screen">
         <div className="flex flex-col justify-center items-center gap-14 py-14 sm:py-24">
           <h1 className="uppercase max-sm:text-2xl">Languages We Use</h1>
-          <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:justify-start max-sm:items-start justify-center items-center gap-16 text-center">
+          <div className="flex max-lg:flex-col max-lg:gap-2 max-lg:justify-start max-lg:items-start justify-center items-center gap-16 text-center">
             <div className="flex justify-center items-center gap-2">
               <IconBrandHtml5 title="HTML5" className="size-8" />
               <p className="text-xl sm:text-2xl">HTML5</p>
