@@ -1,6 +1,6 @@
+import { IconBrandLinkedin, IconBrandX, IconWorld } from "@tabler/icons-react";
 import { useState } from "react";
 import { cn } from "../../lib/utils";
-import { IconBrandLinkedin, IconBrandX, IconWorld } from "@tabler/icons-react";
 
 export interface TeamMember {
   id: string;
@@ -40,8 +40,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     id: "3",
     name: "MD Ferdous Hassan",
     role: "Chief Communications Officer",
-    imageURL:
-      "https://media.licdn.com/dms/image/v2/D5603AQH1jS9W4Cvyjw/profile-displayphoto-crop_800_800/B56Zoe0hmfH8AI-/0/1761453678008?e=1779926400&v=beta&t=-OHcDb_EgCRLATHoR__m1KRVTT17CihH4B725T2GhQI",
+    imageURL: "/snigdho.png",
     socialLinks: { LinkedIn: "https://www.linkedin.com/in/ferdoushassan280/" },
   },
   {

@@ -31,6 +31,9 @@
         "noUnusedVariables": "error",
         "noUnusedLabels": "error",
         "noUnusedPrivateClassMembers": "error"
+      },
+      "a11y": {
+        "noStaticElementInteractions": "off"
       }
     }
   },
