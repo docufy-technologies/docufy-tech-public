@@ -75,7 +75,7 @@ function Home() {
             <div className="grid grid-cols-2 max-sm:flex max-sm:flex-col gap-4 w-full max-w-sm justify-center items-center">
               <AnimatedButton size="lg" variant="accent" className="w-full">
                 <a
-                  href="https://calendly.com/docufytechnologies/30min"
+                  href="https://calendly.com/docufy-bd/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full h-full flex justify-center items-center"

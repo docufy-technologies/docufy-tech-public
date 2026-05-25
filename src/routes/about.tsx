@@ -1,10 +1,10 @@
+import { createFileRoute } from "@tanstack/react-router";
 import {
-  TeamShowcaseMobile,
   TeamShowcaseDesktop,
+  TeamShowcaseMobile,
 } from "@/components/blocks/team-showcase";
 import AnimatedButton from "@/components/ui/animated-button";
 import { Quoted } from "@/components/ui/quoted";
-import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about")({
   component: RouteComponent,
@@ -110,7 +110,7 @@ function RouteComponent() {
         />
         <AnimatedButton variant="accent">
           <a
-            href="https://calendly.com/docufytechnologies/30min"
+            href="https://calendly.com/docufy-bd/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full h-full flex justify-center items-center"
