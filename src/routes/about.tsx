@@ -73,10 +73,10 @@ function RouteComponent() {
             >
               Docufy
             </a>
-            . We partner with international businesses seeking a reliable
-            technology provider backed by a transparent process, effective
-            communication, and a strong commitment to delivering quality
-            results.
+            . We collaborate with businesses and organizations who expect
+            concrete results in every project, backed by a reliable partner to
+            fulfill their technological needs with structure, clear
+            communication, and accountability.
           </span>
         </div>
         <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 w-full pt-10">
