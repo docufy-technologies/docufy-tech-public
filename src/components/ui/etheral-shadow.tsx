@@ -1,4 +1,4 @@
-import { type JSX, createSignal, onCleanup, onMount } from "solid-js";
+import { type JSX, onCleanup, onMount } from "solid-js";
 
 interface AnimationConfig {
   preview?: boolean;
@@ -58,8 +58,6 @@ export function EtheralShadow(props: ShadowOverlayProps) {
   let animationFrameId: number | undefined;
   let startTime: number | undefined;
 
-  const [hueValue, setHueValue] = createSignal(180);
-
   onMount(() => {
     if (!animationEnabled || !feColorMatrixRef) return;
 
@@ -70,7 +68,6 @@ export function EtheralShadow(props: ShadowOverlayProps) {
       const elapsed = now - startTime!;
       const progress = (elapsed % durationMs) / durationMs;
       const value = progress * 360;
-      setHueValue(value);
       if (feColorMatrixRef) {
         feColorMatrixRef.setAttribute("values", String(value));
       }
@@ -89,7 +86,12 @@ export function EtheralShadow(props: ShadowOverlayProps) {
   return (
     <div
       class={props.className}
-      style={{ position: "relative", overflow: "hidden", width: "100%", height: "100%" }}
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        width: "100%",
+        height: "100%",
+      }}
     >
       <div
         style={{
@@ -100,6 +102,7 @@ export function EtheralShadow(props: ShadowOverlayProps) {
       >
         {animationEnabled && (
           <svg style={{ position: "absolute" }}>
+            <title>Etheral Shadow Filter</title>
             <defs>
               <filter id={id}>
                 <feTurbulence
