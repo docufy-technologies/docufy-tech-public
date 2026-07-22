@@ -98,9 +98,9 @@ The legal documents are aligned with the site’s low-risk, informational nature
 
 ## Technical Stack
 
-- React + Vite
-- TanStack Router
-- Tailwind CSS
+- SolidJS + Vite
+- TanStack Solid Router
+- Tailwind CSS v4
 - Biome for linting and formatting
 - Vitest for testing
 
@@ -134,6 +134,5 @@ pnpm check
 ## Notes
 
 - This project is designed for static hosting.
-- Demo files from the starter app can be removed if they are still present.
 - The current information architecture is optimized for trust-building and direct inquiry, not deep product browsing.
 
