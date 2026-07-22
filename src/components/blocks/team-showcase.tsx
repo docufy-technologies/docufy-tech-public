@@ -20,7 +20,7 @@ export interface TeamMember {
 
 const DEFAULT_MEMBERS: TeamMember[] = [
   {
-    id: "1",
+    id: "moon-bmda",
     name: "Md Farhan Mahmud Moon",
     role: "Business and Management Development Advisor",
     imageURL: "/moon.webp",
@@ -30,7 +30,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     },
   },
   {
-    id: "2",
+    id: "sneha-ceo",
     name: "Sneha Salam",
     role: "Founder & Chief Executive Officer",
     imageURL: "/sneha.webp",
@@ -41,21 +41,14 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     },
   },
   {
-    id: "3",
+    id: "snigdho-cmo",
     name: "MD Ferdous Hassan",
     role: "Chief Communications Officer",
     imageURL: "/snigdho.png",
     socialLinks: { LinkedIn: "https://www.linkedin.com/in/ferdoushassan280/" },
   },
   {
-    id: "4",
-    name: "Nazifa Zafrin Ahona",
-    role: "Chief Operating Officer",
-    imageURL: "/ahona.webp",
-    socialLinks: { LinkedIn: "https://www.linkedin.com/in/nazifazafrin/" },
-  },
-  {
-    id: "5",
+    id: "ashik-clo",
     name: "Md Izaz Uddin Ashik",
     role: "Chief Legal Officer",
     imageURL: "/ashik.webp",
@@ -64,7 +57,7 @@ const DEFAULT_MEMBERS: TeamMember[] = [
     },
   },
   {
-    id: "6",
+    id: "ratul-cto",
     name: "Rakibul Hasan Ratul",
     role: "Chief Technology Officer",
     imageURL: "/ratul.webp",
