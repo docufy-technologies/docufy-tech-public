@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/solid-router";
 
 export const Route = createFileRoute("/terms-of-service")({
   component: RouteComponent,
@@ -6,12 +6,12 @@ export const Route = createFileRoute("/terms-of-service")({
 
 function RouteComponent() {
   return (
-    <section className="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>h1,h2,h3,h4,h5,h6]:mb-2 [&>h1,h2,h3,h4,h5,h6]:mt-8 [&>p,ul,li]:text-lg [&>ul,li]:list-disc [&>ul]:mt-0 [&>p]:my-4">
+    <section class="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>h1,h2,h3,h4,h5,h6]:mb-2 [&>h1,h2,h3,h4,h5,h6]:mt-8 [&>p,ul,li]:text-lg [&>ul,li]:list-disc [&>ul]:mt-0 [&>p]:my-4">
       <h1>Terms of Service</h1>
-      <p className="pt-4 font-bold">Docufy Tech</p>
+      <p class="pt-4 font-bold">Docufy Tech</p>
       <p>Effective Date: May 20, 2026</p>
       <p>Last updated: May 20, 2026</p>
-      <p className="pt-8">
+      <p class="pt-8">
         These Terms of Service (<b>"Terms"</b>) govern your access to and use of
         tech.docufybd.com, any related pages, links, emails, Calendly pages, and
         other communications we provide through or in connection with the site

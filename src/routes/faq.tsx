@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/solid-router";
 
 import {
   Accordion,
@@ -14,29 +14,26 @@ export const Route = createFileRoute("/faq")({
 
 function RouteComponent() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-30 mt-10">
-      <div className="mb-10 max-w-3xl">
+    <section class="mx-auto max-w-4xl px-6 py-30 mt-10">
+      <div class="mb-10 max-w-3xl">
         <h1>Frequently Asked Questions</h1>
-        <p className="mt-4 text-lg">
+        <p class="mt-4 text-lg">
           Clear answers on pricing, support, compliance, and platform features.
         </p>
       </div>
 
-      <div className="space-y-10">
+      <div class="space-y-10">
         {faqItems.map((section) => (
-          <div key={section.category} className="space-y-4">
-            <h2 className="text-accent">{section.category}</h2>
-            <Accordion type="multiple">
-              {section.questionnaire.map((item, index) => (
-                <AccordionItem
-                  key={item.question}
-                  value={`${section.category}-${index}`}
-                >
-                  <AccordionTrigger className="text-base sm:text-lg hover:no-underline hover:text-primary font-body">
+          <div class="space-y-4">
+            <h2 class="text-accent">{section.category}</h2>
+            <Accordion>
+              {section.questionnaire.map((item) => (
+                <AccordionItem>
+                  <AccordionTrigger class="text-base sm:text-lg hover:no-underline hover:text-primary font-body">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-base sm:text-lg text-muted-foreground">
+                    <p class="text-base sm:text-lg text-muted-foreground">
                       {item.answer}
                     </p>
                   </AccordionContent>
@@ -47,11 +44,11 @@ function RouteComponent() {
         ))}
       </div>
 
-      <p className="mt-12 text-base sm:text-lg text-muted-foreground">
+      <p class="mt-12 text-base sm:text-lg text-muted-foreground">
         Need a tailored quote? Reach us at{" "}
         <a
           href="mailto:info@tech.docufybd.com"
-          className="underline underline-offset-3"
+          class="underline underline-offset-3"
         >
           info@tech.docufybd.com
         </a>{" "}

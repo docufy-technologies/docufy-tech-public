@@ -1,9 +1,10 @@
 import type { ISourceOptions } from "@tsparticles/engine";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useId, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/solid";
+import { createSignal, onMount, Show } from "solid-js";
 
 type SparklesProps = {
+  class?: string;
   className?: string;
   size?: number;
   minSize?: number | null;
@@ -18,31 +19,34 @@ type SparklesProps = {
   options?: ISourceOptions;
 };
 
-export function Sparkles({
-  className,
-  size = 1,
-  minSize = null,
-  density = 800,
-  speed = 1,
-  minSpeed = null,
-  opacity = 1,
-  opacitySpeed = 3,
-  minOpacity = null,
-  color = "#FFFFFF",
-  background = "transparent",
-  options = {},
-}: SparklesProps) {
-  const [isReady, setIsReady] = useState(false);
+let engineReady = false;
+const enginePromise = initParticlesEngine(async (engine) => {
+  await loadSlim(engine);
+}).then(() => {
+  engineReady = true;
+});
 
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setIsReady(true);
-    });
-  }, []);
+export function Sparkles(props: SparklesProps) {
+  const [ready, setReady] = createSignal(engineReady);
 
-  const id = useId();
+  onMount(() => {
+    if (!ready()) {
+      enginePromise.then(() => setReady(true));
+    }
+  });
+
+  const id = `sparkles-${Math.random().toString(36).slice(2, 9)}`;
+
+  const size = props.size ?? 1;
+  const minSize = props.minSize ?? null;
+  const density = props.density ?? 800;
+  const speed = props.speed ?? 1;
+  const minSpeed = props.minSpeed ?? null;
+  const opacity = props.opacity ?? 1;
+  const opacitySpeed = props.opacitySpeed ?? 3;
+  const minOpacity = props.minOpacity ?? null;
+  const color = props.color ?? "#FFFFFF";
+  const background = props.background ?? "transparent";
 
   const defaultOptions = {
     background: {
@@ -92,13 +96,18 @@ export function Sparkles({
     detectRetina: true,
   } satisfies ISourceOptions;
 
+  const mergedOptions = () => ({
+    ...defaultOptions,
+    ...props.options,
+  });
+
   return (
-    isReady && (
+    <Show when={ready()}>
       <Particles
         id={id}
-        options={{ ...defaultOptions, ...options }}
-        className={className}
+        options={mergedOptions()}
+        class={props.class ?? props.className}
       />
-    )
+    </Show>
   );
 }

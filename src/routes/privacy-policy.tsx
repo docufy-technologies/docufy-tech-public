@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/solid-router";
 
 export const Route = createFileRoute("/privacy-policy")({
   component: RouteComponent,
@@ -6,14 +6,14 @@ export const Route = createFileRoute("/privacy-policy")({
 
 function RouteComponent() {
   return (
-    <section className="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>h1,h2,h3,h4,h5,h6]:mb-2 [&>h1,h2,h3,h4,h5,h6]:mt-8 [&>p,ul,li]:text-lg [&>ul,li]:list-disc [&>ul]:mt-0 [&>p]:my-4">
+    <section class="max-w-3xl p-6 my-30 mx-auto *:leading-relaxed [&>h1,h2,h3,h4,h5,h6]:mb-2 [&>h1,h2,h3,h4,h5,h6]:mt-8 [&>p,ul,li]:text-lg [&>ul,li]:list-disc [&>ul]:mt-0 [&>p]:my-4">
       <h1>Privacy Policy</h1>
-      <p className="pt-4">
+      <p class="pt-4">
         <b>Docufy Tech</b>
       </p>
       <p>Effective Date: May 20, 2026</p>
       <p>Last updated: May 20, 2026</p>
-      <p className="pt-8">
+      <p class="pt-8">
         This Privacy Policy explains how Docufy Tech collects, uses, discloses,
         stores, and protects information when you visit tech.docufybd.com and
         any related pages, links, emails, Calendly pages, or other

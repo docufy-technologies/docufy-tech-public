@@ -4,8 +4,8 @@ import {
   IconBrandLinkedin,
   IconBrandX,
   IconMail,
-} from "@tabler/icons-react";
-import { Link, type LinkProps } from "@tanstack/react-router";
+} from "@tabler/icons-solidjs";
+import { Link } from "@tanstack/solid-router";
 
 function FooterAnchor({ label, href }: { label: string; href: string }) {
   return (
@@ -13,18 +13,18 @@ function FooterAnchor({ label, href }: { label: string; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-muted-foreground hover:text-primary block duration-150"
+      class="text-muted-foreground hover:text-primary block duration-150"
     >
       {label}
     </a>
   );
 }
 
-function FooterLink({ label, to }: { label: string; to: LinkProps["to"] }) {
+function FooterLink({ label, to }: { label: string; to: string }) {
   return (
     <Link
       to={to}
-      className="text-muted-foreground hover:text-primary block duration-150"
+      class="text-muted-foreground hover:text-primary block duration-150"
     >
       {label}
     </Link>
@@ -33,20 +33,20 @@ function FooterLink({ label, to }: { label: string; to: LinkProps["to"] }) {
 
 export default function Footer() {
   return (
-    <footer className="pb-16">
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
+    <footer class="pb-16">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2">
           <FooterAnchor label="Who We Are" href="https://docufybd.com/about" />
           <FooterLink label="Terms of Service" to="/terms-of-service" />
           <FooterLink label="Privacy Policy" to="/privacy-policy" />
         </div>
-        <div className="my-5 flex flex-wrap justify-center gap-6 text-sm">
+        <div class="my-5 flex flex-wrap justify-center gap-6 text-sm">
           <a
             href="https://x.com/docufybd"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X/Twitter"
-            className="text-muted-foreground hover:text-primary block"
+            class="text-muted-foreground hover:text-primary block"
           >
             <IconBrandX />
           </a>
@@ -55,7 +55,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-muted-foreground hover:text-primary block"
+            class="text-muted-foreground hover:text-primary block"
           >
             <IconBrandLinkedin />
           </a>
@@ -64,7 +64,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="text-muted-foreground hover:text-primary block"
+            class="text-muted-foreground hover:text-primary block"
           >
             <IconBrandFacebook />
           </a>
@@ -73,7 +73,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="text-muted-foreground hover:text-primary block"
+            class="text-muted-foreground hover:text-primary block"
           >
             <IconBrandInstagram />
           </a>
@@ -82,12 +82,12 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
-            className="text-muted-foreground hover:text-primary block"
+            class="text-muted-foreground hover:text-primary block"
           >
             <IconMail />
           </a>
         </div>
-        <span className="text-muted-foreground block text-center text-base font-bold">
+        <span class="text-muted-foreground block text-center text-base font-bold">
           {" "}
           © {new Date().getFullYear()} <a href="https://docufybd.com">Docufy</a>
           , All rights reserved

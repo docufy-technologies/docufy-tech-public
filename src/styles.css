@@ -6,49 +6,49 @@
 /* font face of cabinet grostesk */
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Thin.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-thin.woff2") format("woff2");
     font-weight: 100;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Extralight.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-extralight.woff2") format("woff2");
     font-weight: 200;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Light.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-light.woff2") format("woff2");
     font-weight: 300;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Regular.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-regular.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Medium.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-medium.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Bold.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-bold.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Extrabold.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-extrabold.woff2") format("woff2");
     font-weight: 800;
     font-display: swap;
 }
 @font-face {
     font-family: "CabinetGrotesk";
-    src: url("/fonts/cabinet/CabinetGrotesk-Black.woff2") format("woff2");
+    src: url("/fonts/cabinet/cabinet-grotesk-black.woff2") format("woff2");
     font-weight: 900;
     font-display: swap;
 }
@@ -56,70 +56,70 @@
 /* font face of rowan */
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-Light.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-light.woff2") format("woff2");
     font-weight: 300;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-LightItalic.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-light-italic.woff2") format("woff2");
     font-weight: 300;
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-Regular.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-regular.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-Italic.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-italic.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-Medium.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-medium.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-MediumItalic.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-medium-italic.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-Semibold.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-semibold.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-SemiboldItalic.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-semibold-italic.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-Bold.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-bold.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
     font-style: normal;
 }
 @font-face {
     font-family: "Rowan";
-    src: url("/fonts/rowan/Rowan-BoldItalic.woff2") format("woff2");
+    src: url("/fonts/rowan/rowan-bold-italic.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
     font-style: italic;

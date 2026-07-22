@@ -1,12 +1,11 @@
 /** biome-ignore-all lint/a11y/noSvgWithoutTitle: <works just> */
 
-import type { ClassNameValue } from "tailwind-merge";
 import { cn } from "@/lib/utils";
 
-export function GhoshamajaLine({ className }: { className?: ClassNameValue }) {
+export function GhoshamajaLine(props: { class?: string; className?: string }) {
   return (
     <svg
-      className={cn("text-secondary", className)}
+      class={cn("text-secondary", props.class, props.className)}
       viewBox="0 0 254 104"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -1,15 +1,4 @@
-import {
-  type AnimationPlaybackControls,
-  animate,
-  useMotionValue,
-} from "framer-motion";
-import {
-  type CSSProperties,
-  type ReactNode,
-  useEffect,
-  useId,
-  useRef,
-} from "react";
+import { type JSX, onCleanup, onMount } from "solid-js";
 
 interface AnimationConfig {
   preview?: boolean;
@@ -17,23 +6,20 @@ interface AnimationConfig {
   speed: number;
 }
 
-interface NoiseConfig {
+type NoiseConfig = {
   opacity: number;
   scale: number;
-}
+};
 
-interface ShadowOverlayProps {
-  type?: "preset" | "custom";
-  presetIndex?: number;
+type ShadowOverlayProps = {
   sizing?: "fill" | "stretch";
   color?: string;
   noise?: NoiseConfig;
-  style?: CSSProperties;
   className?: string;
-  children: ReactNode;
+  children: JSX.Element;
   maskImageURL?: string;
   opacity?: number;
-}
+};
 
 function mapRange(
   value: number,
@@ -49,29 +35,17 @@ function mapRange(
   return toLow + percentage * (toHigh - toLow);
 }
 
-const useInstanceId = (): string => {
-  const id = useId();
-  const cleanId = id.replace(/:/g, "");
-  const instanceId = `shadowoverlay-${cleanId}`;
-  return instanceId;
-};
+let instanceCounter = 0;
 
-export function EtheralShadow({
-  sizing = "fill",
-  color = "var(--secondary)",
-  noise,
-  style,
-  className,
-  children,
-  maskImageURL = "/mask-2.png",
-  opacity = 1,
-}: ShadowOverlayProps) {
-  const animation = { scale: 100, speed: 90 } as AnimationConfig;
-  const id = useInstanceId();
+export function EtheralShadow(props: ShadowOverlayProps) {
+  const sizing = props.sizing ?? "fill";
+  const color = props.color ?? "var(--secondary)";
+  const maskImageURL = props.maskImageURL ?? "/mask-2.png";
+  const opacity = props.opacity ?? 1;
+
+  const animation: AnimationConfig = { scale: 100, speed: 90 };
+  const id = `shadowoverlay-${++instanceCounter}`;
   const animationEnabled = animation && animation.scale > 0;
-  const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
-  const hueRotateMotionValue = useMotionValue(180);
-  const hueRotateAnimation = useRef<AnimationPlaybackControls | null>(null);
 
   const displacementScale = animation
     ? mapRange(animation.scale, 1, 100, 20, 100)
@@ -80,55 +54,55 @@ export function EtheralShadow({
     ? mapRange(animation.speed, 1, 100, 1000, 50)
     : 1;
 
-  useEffect(() => {
-    if (feColorMatrixRef.current && animationEnabled) {
-      if (hueRotateAnimation.current) {
-        hueRotateAnimation.current.stop();
-      }
-      hueRotateMotionValue.set(0);
-      hueRotateAnimation.current = animate(hueRotateMotionValue, 360, {
-        duration: animationDuration / 25,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0,
-        ease: "linear",
-        delay: 0,
-        onUpdate: (value: number) => {
-          if (feColorMatrixRef.current) {
-            feColorMatrixRef.current.setAttribute("values", String(value));
-          }
-        },
-      });
+  let feColorMatrixRef: SVGFEColorMatrixElement | undefined;
+  let animationFrameId: number | undefined;
+  let startTime: number | undefined;
 
-      return () => {
-        if (hueRotateAnimation.current) {
-          hueRotateAnimation.current.stop();
-        }
-      };
+  onMount(() => {
+    if (!animationEnabled || !feColorMatrixRef) return;
+
+    startTime = performance.now();
+    const durationMs = (animationDuration / 25) * 1000;
+
+    const tick = (now: number) => {
+      const elapsed = now - startTime!;
+      const progress = (elapsed % durationMs) / durationMs;
+      const value = progress * 360;
+      if (feColorMatrixRef) {
+        feColorMatrixRef.setAttribute("values", String(value));
+      }
+      animationFrameId = requestAnimationFrame(tick);
+    };
+
+    animationFrameId = requestAnimationFrame(tick);
+  });
+
+  onCleanup(() => {
+    if (animationFrameId !== undefined) {
+      cancelAnimationFrame(animationFrameId);
     }
-  }, [animationEnabled, animationDuration, hueRotateMotionValue]);
+  });
 
   return (
     <div
-      className={className}
+      class={props.className}
       style={{
-        overflow: "hidden",
         position: "relative",
+        overflow: "hidden",
         width: "100%",
         height: "100%",
-        ...style,
       }}
     >
       <div
         style={{
           position: "absolute",
-          inset: -displacementScale,
+          inset: `${-displacementScale}px`,
           filter: animationEnabled ? `url(#${id}) blur(4px)` : "none",
         }}
       >
         {animationEnabled && (
-          // biome-ignore lint/a11y/noSvgWithoutTitle: <it just works>
           <svg style={{ position: "absolute" }}>
+            <title>Etheral Shadow Filter</title>
             <defs>
               <filter id={id}>
                 <feTurbulence
@@ -168,11 +142,11 @@ export function EtheralShadow({
         )}
         <div
           style={{
-            backgroundColor: color,
-            maskImage: `url('${maskImageURL}')`,
-            maskSize: sizing === "stretch" ? "100% 100%" : "cover",
-            maskRepeat: "no-repeat",
-            maskPosition: "center",
+            "background-color": color,
+            "mask-image": `url('${maskImageURL}')`,
+            "mask-size": sizing === "stretch" ? "100% 100%" : "cover",
+            "mask-repeat": "no-repeat",
+            "mask-position": "center",
             width: "100%",
             height: "100%",
             opacity,
@@ -180,26 +154,16 @@ export function EtheralShadow({
         />
       </div>
 
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          zIndex: 10,
-        }}
-      >
-        {children}
-      </div>
+      <div class="relative z-10 h-full w-full">{props.children}</div>
 
-      {noise && noise.opacity > 0 && (
+      {props.noise && props.noise.opacity > 0 && (
         <div
+          class="pointer-events-none absolute inset-0"
           style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: `url("/noise.png")`,
-            backgroundSize: noise.scale * 200,
-            backgroundRepeat: "repeat",
-            opacity: noise.opacity / 2,
+            "background-image": 'url("/noise.png")',
+            "background-size": `${props.noise.scale * 200}px`,
+            "background-repeat": "repeat",
+            opacity: props.noise.opacity / 2,
           }}
         />
       )}

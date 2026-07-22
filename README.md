@@ -136,3 +136,4 @@ pnpm check
 - This project is designed for static hosting.
 - Demo files from the starter app can be removed if they are still present.
 - The current information architecture is optimized for trust-building and direct inquiry, not deep product browsing.
+

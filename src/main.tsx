@@ -1,23 +1,23 @@
-import { createRouter, RouterProvider } from "@tanstack/react-router";
-import ReactDOM from "react-dom/client";
-import { routeTree } from "./routeTree.gen";
+import { render } from "solid-js/web";
+import { RouterProvider, createRouter } from "@tanstack/solid-router";
+import { routeTree } from "./route-tree.gen";
 
 const router = createRouter({
   routeTree,
   defaultPreload: "intent",
+  defaultPreloadStaleTime: 0,
   scrollRestoration: true,
 });
 
-declare module "@tanstack/react-router" {
+declare module "@tanstack/solid-router" {
   interface Register {
     router: typeof router;
   }
 }
 
-// biome-ignore lint/style/noNonNullAssertion: <no need to check for null here>
+// biome-ignore lint/style/noNonNullAssertion: <! app element exists >
 const rootElement = document.getElementById("app")!;
 
 if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(<RouterProvider router={router} />);
+  render(() => <RouterProvider router={router} />, rootElement);
 }

@@ -60,7 +60,7 @@ Single CTA across the site: book a meeting via Calendly. Implemented as an ancho
 
 | Concern      | Decision                    |
 | ------------ | --------------------------- |
-| Framework    | React (Vite)                |
+| Framework    | Solid (Vite)                |
 | Routing      | TanStack Router             |
 | Build output | Static export               |
 | Hosting      | cPanel Based Shared Hosting |

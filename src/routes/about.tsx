@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/solid-router";
 import {
   TeamShowcaseDesktop,
   TeamShowcaseMobile,
@@ -42,16 +42,16 @@ function getGMT6Time() {
 function RouteComponent() {
   return (
     <>
-      <section className="h-[50dvh] w-full flex justify-center items-center flex-col gap-4 pt-30">
-        <h1 className="text-center tracking-wider">About The Company</h1>
+      <section class="h-[50dvh] w-full flex justify-center items-center flex-col gap-4 pt-30">
+        <h1 class="text-center tracking-wider">About The Company</h1>
         {/*tagline*/}
-        <span className="text-center text-sm sm:text-lg uppercase tracking-widest text-accent">
+        <span class="text-center text-sm sm:text-lg uppercase tracking-widest text-accent">
           docufy tech: build without limits
         </span>
         {/*gmt+6 time*/}
-        <span className="text-center text-sm max-sm:w-[75%] tracking-wider font-light">
+        <span class="text-center text-sm max-sm:w-[75%] tracking-wider font-light">
           You landed on{" "}
-          <span className="border-b border-accent font-normal">
+          <span class="border-b border-accent font-normal">
             {getGMT6Time()}
           </span>{" "}
           according to our local time!
@@ -59,12 +59,12 @@ function RouteComponent() {
       </section>
 
       {/*what we do, who we are*/}
-      <section className="max-w-3xl sm:py-20 h-fit mx-auto flex flex-col gap-8 items-center justify-center">
-        <div className="flex flex-col items-center justify-center sm:grid sm:grid-cols-3 gap-4 w-full pt-10">
-          <span className="uppercase font-bold h-full sm:mt-1 text-center text-accent">
+      <section class="max-w-3xl sm:py-20 h-fit mx-auto flex flex-col gap-8 items-center justify-center">
+        <div class="flex flex-col items-center justify-center sm:grid sm:grid-cols-3 gap-4 w-full pt-10">
+          <span class="uppercase font-bold h-full sm:mt-1 text-center text-accent">
             who we are
           </span>
-          <span className="sm:text-xl max-sm:text-center col-span-2 font-light max-sm:px-4">
+          <span class="sm:text-xl max-sm:text-center col-span-2 font-light max-sm:px-4">
             Docufy Tech is the technology services subsidiary of{" "}
             <a
               href="https://docufybd.com"
@@ -79,11 +79,11 @@ function RouteComponent() {
             communication, and accountability.
           </span>
         </div>
-        <div className="flex flex-col sm:grid sm:grid-cols-3 gap-4 w-full pt-10">
-          <span className="uppercase h-full sm:mt-1 text-center font-bold text-accent">
+        <div class="flex flex-col sm:grid sm:grid-cols-3 gap-4 w-full pt-10">
+          <span class="uppercase h-full sm:mt-1 text-center font-bold text-accent">
             what we do
           </span>
-          <span className="sm:text-xl max-sm:text-center col-span-2 font-light max-sm:px-4">
+          <span class="sm:text-xl max-sm:text-center col-span-2 font-light max-sm:px-4">
             We design and build applications with a research-first mindset.
             Every engagement starts with understanding the problem, defining the
             outcome, and engineering the solution to match. What we promise is
@@ -94,8 +94,8 @@ function RouteComponent() {
       </section>
 
       {/*team section*/}
-      <section className="py-30 flex flex-col gap-12 justify-center items-center">
-        <h1 className="text-center text-accent max-sm:text-2xl">
+      <section class="py-30 flex flex-col gap-12 justify-center items-center">
+        <h1 class="text-center text-accent max-sm:text-2xl">
           Meet Our Core Members
         </h1>
         <TeamShowcaseDesktop />
@@ -103,7 +103,7 @@ function RouteComponent() {
       </section>
 
       {/*cta*/}
-      <section className="pb-30 pt-10 flex flex-col gap-14 justify-center items-center">
+      <section class="pb-30 pt-10 flex flex-col gap-14 justify-center items-center">
         <Quoted
           text="We are committed to delivering high-quality web applications that meet
         your needs."
@@ -113,7 +113,7 @@ function RouteComponent() {
             href="https://calendly.com/docufy-bd/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full h-full flex justify-center items-center"
+            class="w-full h-full flex justify-center items-center"
           >
             Schedule A Meeting Now
           </a>

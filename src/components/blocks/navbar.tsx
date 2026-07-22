@@ -1,10 +1,5 @@
-"use client";
-
-import { Link, type LinkProps } from "@tanstack/react-router";
-import { motion } from "framer-motion";
-import type React from "react";
-import { useRef, useState } from "react";
-import type { ClassNameValue } from "tailwind-merge";
+import { Link, type LinkProps } from "@tanstack/solid-router";
+import { createSignal, type JSX } from "solid-js";
 import { cn } from "@/lib/utils";
 
 type Position = {
@@ -14,7 +9,7 @@ type Position = {
 };
 
 function NavBar() {
-  const [position, setPosition] = useState({
+  const [position, setPosition] = createSignal<Position>({
     left: 0,
     width: 0,
     opacity: 0,
@@ -22,7 +17,7 @@ function NavBar() {
 
   return (
     <ul
-      className="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-xl z-100 fixed top-1 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0"
+      class="mx-auto flex w-fit rounded-full border-2 border-secondary bg-transparent backdrop-blur-xl z-100 fixed top-1 left-1/2 -translate-x-1/2 px-2 py-1 max-sm:p-1 gap-4 max-sm:gap-0"
       onMouseLeave={() => setPosition((pv) => ({ ...pv, opacity: 0 }))}
     >
       <NavTab setPosition={setPosition} to="/">
@@ -43,50 +38,49 @@ function NavBar() {
   );
 }
 
-const NavTab = ({
-  children,
-  setPosition,
-  className,
-  to,
-}: {
-  children: React.ReactNode;
+function NavTab(props: {
+  children: JSX.Element;
   setPosition: (position: Position) => void;
-  className?: ClassNameValue;
+  class?: string;
   to: LinkProps["to"];
-}) => {
-  const ref = useRef<HTMLLIElement>(null);
+}) {
+  let ref: HTMLLIElement | undefined;
+
   return (
-    <Link to={to}>
+    <Link to={props.to}>
       <li
         ref={ref}
         onMouseEnter={() => {
-          if (!ref.current) return;
-
-          const { width } = ref.current.getBoundingClientRect();
-          setPosition({
+          if (!ref) return;
+          const { width } = ref.getBoundingClientRect();
+          props.setPosition({
             width,
             opacity: 1,
-            left: ref.current.offsetLeft,
+            left: ref.offsetLeft,
           });
         }}
-        className={cn(
+        class={cn(
           "relative z-10 block cursor-pointer px-3 py-1.5 text-base! md:text-base rounded-full hover:bg-secondary",
-          className,
+          props.class,
         )}
       >
-        {children}
+        {props.children}
       </li>
     </Link>
   );
-};
+}
 
-const Cursor = ({ position }: { position: Position }) => {
+function Cursor(props: { position: () => Position }) {
   return (
-    <motion.li
-      animate={position}
-      className="absolute z-0 h-9 -translate-y-2 max-sm:-translate-y-2 rounded-full bg-secondary"
+    <li
+      class="absolute z-0 h-9 -translate-y-2 max-sm:-translate-y-2 rounded-full bg-secondary transition-all duration-300 ease-out"
+      style={{
+        left: `${props.position().left}px`,
+        width: `${props.position().width}px`,
+        opacity: props.position().opacity,
+      }}
     />
   );
-};
+}
 
 export default NavBar;
