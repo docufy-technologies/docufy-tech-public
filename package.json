@@ -31,7 +31,6 @@
     "@solidjs/testing-library": "^0.8.10",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-cli": "^1.133.21",
-    "@tanstack/router-plugin": "latest",
     "jsdom": "^28.1.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",

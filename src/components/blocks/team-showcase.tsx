@@ -141,9 +141,13 @@ export function TeamShowcaseDesktop({
 }: TeamShowcaseProps) {
   const [hoveredId, setHoveredId] = createSignal<string | null>(null);
 
-  const col1 = members.filter((_, i) => i % 3 === 0);
-  const col2 = members.filter((_, i) => i % 3 === 1);
-  const col3 = members.filter((_, i) => i % 3 === 2);
+  const col1 = members.filter(
+    (m) => m.id === "moon-bmda" || m.id === "ashik-clo",
+  );
+  const col2 = members.filter((m) => m.id === "sneha-ceo");
+  const col3 = members.filter(
+    (m) => m.id === "snigdho-cmo" || m.id === "ratul-cto",
+  );
 
   return (
     <div class="max-sm:hidden flex flex-col md:flex-row items-start gap-8 md:gap-10 lg:gap-6 select-none w-full max-w-4xl mx-auto py-8 px-4 md:px-6 font-sans">
@@ -162,7 +166,7 @@ export function TeamShowcaseDesktop({
         </div>
 
         {/* Column 2 */}
-        <div class="flex flex-col gap-2 mt-[48px] sm:mt-[56px] md:mt-[68px]">
+        <div class="flex flex-col gap-2 mt-[56px] sm:mt-[72px] md:mt-[96px]">
           {col2.map((member) => (
             <PhotoCard
               member={member}

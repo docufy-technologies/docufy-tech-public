@@ -1,6 +1,6 @@
 import { render } from "solid-js/web";
 import { RouterProvider, createRouter } from "@tanstack/solid-router";
-import { routeTree } from "./routeTree.gen";
+import { routeTree } from "./route-tree.gen";
 
 const router = createRouter({
   routeTree,
@@ -15,6 +15,7 @@ declare module "@tanstack/solid-router" {
   }
 }
 
+// biome-ignore lint/style/noNonNullAssertion: <! app element exists >
 const rootElement = document.getElementById("app")!;
 
 if (!rootElement.innerHTML) {

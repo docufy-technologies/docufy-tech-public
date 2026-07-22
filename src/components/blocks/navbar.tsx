@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/solid-router";
+import { Link, type LinkProps } from "@tanstack/solid-router";
 import { createSignal, type JSX } from "solid-js";
 import { cn } from "@/lib/utils";
 
@@ -42,12 +42,12 @@ function NavTab(props: {
   children: JSX.Element;
   setPosition: (position: Position) => void;
   class?: string;
-  to: string;
+  to: LinkProps["to"];
 }) {
   let ref: HTMLLIElement | undefined;
 
   return (
-    <Link to={props.to as "/"}>
+    <Link to={props.to}>
       <li
         ref={ref}
         onMouseEnter={() => {
