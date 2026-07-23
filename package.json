@@ -14,10 +14,7 @@
   },
   "dependencies": {
     "@tabler/icons-solidjs": "^3.44.0",
-    "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/router-plugin": "^1.133.21",
     "@tanstack/solid-router": "latest",
-    "@tanstack/solid-router-devtools": "latest",
     "@tsparticles/engine": "^4.3.2",
     "@tsparticles/slim": "^4.3.2",
     "@tsparticles/solid": "^4.3.2",
@@ -29,8 +26,9 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
     "@solidjs/testing-library": "^0.8.10",
-    "@tanstack/devtools-vite": "latest",
+    "@tailwindcss/vite": "^4.1.18",
     "@tanstack/router-cli": "^1.133.21",
+    "@tanstack/router-plugin": "^1.133.21",
     "jsdom": "^28.1.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
