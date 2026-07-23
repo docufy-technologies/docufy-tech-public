@@ -26,13 +26,13 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.3",
     "@solidjs/testing-library": "^0.8.10",
+    "@swc/core": "^1.15.46",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/router-cli": "^1.133.21",
     "@tanstack/router-plugin": "^1.133.21",
     "jsdom": "^28.1.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
-    "vite-plugin-solid": "^2.11.12",
-    "vitest": "^4.1.5"
+    "vite-plugin-solid": "^2.11.12"
   }
 }

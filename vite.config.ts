@@ -12,11 +12,25 @@ export default defineConfig({
       target: "solid",
       autoCodeSplitting: true,
       generatedRouteTree: "./src/route-tree.gen.ts",
-      enableRouteTreeFormatting: true,
       routeToken: "_layout",
     }),
     solidPlugin(),
   ],
+  optimizeDeps: {
+    include: ["@tsparticles/engine", "@tsparticles/slim"],
+  },
+  server: {
+    watch: {
+      ignored: [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/.git/**",
+        "**/docs/**",
+        "**/*.md",
+        "**/pnpm-lock.yaml",
+      ],
+    },
+  },
   build: {
     rollupOptions: {
       output: {
@@ -34,7 +48,7 @@ export default defineConfig({
               : pkgPath.split("/")[0];
 
             // replace / in scoped names so they are valid filenames
-            return pkgName.replace("/", "_").replace(/@/g, "_");
+            return pkgName.replace("/", "_").replace(/@/g, "");
           }
         },
       },
