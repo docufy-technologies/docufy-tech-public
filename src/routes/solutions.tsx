@@ -1,10 +1,13 @@
 import {
+  IconAdjustments,
   IconAppWindow,
   IconBlocks,
   IconBusinessplan,
   IconFunction,
+  IconRobot,
   IconStack,
   IconWebhook,
+  IconWaveSine,
 } from "@tabler/icons-solidjs";
 import { createFileRoute } from "@tanstack/solid-router";
 import type { JSX } from "solid-js";
@@ -71,6 +74,21 @@ function RouteComponent() {
             title="Web Application Development"
             description="Builds responsive, user-friendly websites for your needs."
             icon={<IconWebhook class="size-6" />}
+          />
+          <SolutionsCardCustom
+            title="AI Agent Configuration"
+            description="Sets up and tunes AI coding agents like Claude Code, OpenCode, and Gemini CLI for your exact workflow."
+            icon={<IconRobot class="size-6" />}
+          />
+          <SolutionsCardCustom
+            title="Custom AI Instructions"
+            description="Builds instruction sets that turn AI assistants from generic tools into team-specific operators."
+            icon={<IconAdjustments class="size-6" />}
+          />
+          <SolutionsCardCustom
+            title="AI Based Automations"
+            description="Wires up n8n, Make, or custom integrations so repetitive work runs without you."
+            icon={<IconWaveSine class="size-6" />}
           />
         </div>
       </div>

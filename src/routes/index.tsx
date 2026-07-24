@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/solid-router";
+import CraftCards from "@/components/blocks/craft-card";
 import PartnersSection from "@/components/blocks/partners-section";
 import TechStackSection from "@/components/blocks/tech-stack-section";
 import WhyDocufyTechSection from "@/components/blocks/why-docufy-tech-section";
@@ -84,6 +85,16 @@ function Home() {
             </div>
           </div>
         </EtheralShadow>
+      </section>
+      <section>
+        <div class="w-full mx-auto max-w-7xl text-center pb-4 px-6">
+          <h1 class="pb-12 text-center max-sm:text-2xl text-balance">
+            AI that works in your stack, not just in ours.
+          </h1>
+        </div>
+        <div class="h-[80dvh] w-full mb-10">
+          <CraftCards />
+        </div>
       </section>
       <WhyDocufyTechSection />
       <TechStackSection />
