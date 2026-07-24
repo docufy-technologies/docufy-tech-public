@@ -2,7 +2,7 @@ import { createSignal, For, onCleanup, onMount, type JSX } from "solid-js";
 import { IconPointer2 } from "@tabler/icons-solidjs";
 import { cn } from "@/lib/utils";
 
-type Card = {
+type CardItem = {
   title: string;
   description: string;
   skeleton: JSX.Element;
@@ -19,11 +19,11 @@ export interface CraftCardsProps {
   springDuration?: number;
   activeScale?: number;
   cardSpacing?: number;
-  cards?: Card[];
+  cards?: CardItem[];
   class?: string;
 }
 
-const defaultCards: Card[] = [
+const defaultCards: CardItem[] = [
   {
     title: "AI Agent Configuration",
     description:
@@ -177,16 +177,16 @@ export function CraftCards(props: CraftCardsProps) {
   const activeScale = props.activeScale ?? 1.15;
   const cardSpacing = props.cardSpacing ?? 260;
 
-  const [active, setActive] = createSignal<Card | null>(null);
+  const [active, setActive] = createSignal<CardItem | null>(null);
   const [spacing, setSpacing] = createSignal(cardSpacing);
   let containerRef: HTMLDivElement | undefined;
 
   const middle = (cards.length - 1) / 2;
 
   const isAnyCardActive = () => active() !== null;
-  const isCurrentActive = (card: Card) => active()?.title === card.title;
+  const isCurrentActive = (card: CardItem) => active()?.title === card.title;
 
-  const handleCardClick = (card: Card, e: MouseEvent) => {
+  const handleCardClick = (card: CardItem, e: MouseEvent) => {
     e.stopPropagation();
     setActive(isCurrentActive(card) ? null : card);
   };
@@ -213,18 +213,18 @@ export function CraftCards(props: CraftCardsProps) {
     });
   });
 
-  const getCardTransform = (card: Card, index: number) => {
+  const getCardTransform = (card: CardItem, index: number) => {
     const offsetX = (index - middle) * spacing();
     if (isCurrentActive(card)) {
       return `translate(0px, 0px) rotate(0deg) scale(${activeScale})`;
     }
     if (isAnyCardActive()) {
-      return `translate(${offsetX * 0.4}px, 400px) rotate(${0.2 * card.config.rotate}deg) scale(0.7)`;
+      return `translate(${offsetX * 0.4}px, 250px) rotate(${0.2 * card.config.rotate}deg) scale(0.7)`;
     }
     return `translate(${offsetX}px, ${card.config.y}px) rotate(${card.config.rotate}deg) scale(1)`;
   };
 
-  const getCardZIndex = (card: Card) => {
+  const getCardZIndex = (card: CardItem) => {
     if (isCurrentActive(card)) return 50;
     return card.config.zIndex;
   };
@@ -235,7 +235,7 @@ export function CraftCards(props: CraftCardsProps) {
         ref={containerRef}
         onClick={handleContainerClick}
         onKeyDown={handleContainerKeydown}
-        class="relative mx-auto flex h-120 w-full max-w-5xl items-center justify-center [--height:300px] [--width:220px] lg:[--height:400px] lg:[--width:300px]"
+        class="relative mx-auto flex h-96 w-full max-w-5xl items-center justify-center [--height:300px] [--width:200px] lg:[--width:300px]"
       >
         <For each={cards}>
           {(card, index) => (
@@ -244,7 +244,7 @@ export function CraftCards(props: CraftCardsProps) {
               onClick={(e) => handleCardClick(card, e)}
               style={{
                 width: "var(--width)",
-                height: "var(--height)",
+                "min-height": "var(--height)",
                 "margin-left": "calc(var(--width) / -2)",
                 "margin-top": "calc(var(--height) / -2)",
                 "z-index": getCardZIndex(card),
@@ -270,7 +270,7 @@ export function CraftCards(props: CraftCardsProps) {
                         : "translate(20px, 20px)",
                       transition: `opacity ${springDuration}ms ease, transform ${springDuration}ms ease`,
                     }}
-                    class="mt-3 text-left text-sm leading-relaxed text-muted-foreground md:text-base"
+                    class="mt-1 mb-6 text-left text-sm leading-relaxed text-muted-foreground md:text-base"
                   >
                     {card.description}
                   </p>
